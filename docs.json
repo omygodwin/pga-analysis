@@ -1,0 +1,22 @@
+[
+  {
+    "event": "the Memorial Tournament",
+    "short": "Memorial Tournament",
+    "course": "Muirfield Village",
+    "location": "Dublin, Ohio",
+    "start": "2026-06-04",
+    "end": "2026-06-07",
+    "path": "memorial-2026/",
+    "blurb": "Preview + full 72-hole recap: strokes-gained leaderboard, how the read held up, pin zones, hole-by-hole."
+  },
+  {
+    "event": "RBC Canadian Open",
+    "short": "RBC Canadian Open",
+    "course": "TPC Toronto at Osprey Valley — North",
+    "location": "Caledon, Ontario",
+    "start": "2026-06-11",
+    "end": "2026-06-14",
+    "path": "rbc-canadian-open-2026/",
+    "blurb": "Tournament preview: course archetype, cross-venue fit, the field, pin zones, hole-by-hole."
+  }
+]
