@@ -1,0 +1,37 @@
+{
+  "name": "StimpDeck \u2014 PGA Analysis",
+  "short_name": "StimpDeck",
+  "description": "Live PGA Tour tournament previews & recaps \u2014 strokes gained, course history, and weather-aware forecasts.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0c1524",
+  "background_color": "#080f1c",
+  "icons": [
+    {
+      "src": "logo-badge-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo-badge-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo-badge-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
