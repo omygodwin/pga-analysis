@@ -1,5 +1,15 @@
 [
   {
+    "event": "ISCO Championship",
+    "short": "ISCO Championship",
+    "course": "Hurstbourne Country Club",
+    "location": "Louisville, Kentucky",
+    "start": "2026-07-09",
+    "end": "2026-07-12",
+    "path": "isco-championship-2026/",
+    "blurb": "Tournament preview: course archetype, weather & draw read, what Hurstbourne rewards, the field, player quotes, and picks."
+  },
+  {
     "event": "the Memorial Tournament",
     "short": "Memorial Tournament",
     "course": "Muirfield Village",
