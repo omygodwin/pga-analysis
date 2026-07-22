@@ -28,5 +28,15 @@
     "end": "2026-06-14",
     "path": "rbc-canadian-open-2026/",
     "blurb": "Tournament preview: course archetype, cross-venue fit, the field, pin zones, hole-by-hole."
+  },
+  {
+    "event": "3M Open",
+    "short": "3M Open",
+    "course": "TPC Twin Cities",
+    "location": "Blaine, Minnesota",
+    "start": "2026-07-23",
+    "end": "2026-07-26",
+    "path": "3m-open-2026/",
+    "blurb": "Tournament preview: the birdie-fest archetype, approach-forward venue fit, six years of course history, the field, pin zones, hole-by-hole."
   }
 ]
