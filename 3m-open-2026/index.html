@@ -1165,16 +1165,29 @@ table.r2lb thead tr th:nth-child(1),table.r2lb thead tr th:nth-child(2){z-index:
   }
   function place(el){
     root.classList.remove('gr-center');
-    var r=el.getBoundingClientRect(), pad=8, vw=innerWidth, vh=innerHeight-musicH();
-    var top=Math.max(10, r.top-pad), left=Math.max(8, r.left-pad);
-    var w=Math.min(r.width+pad*2, vw-left-8), h=Math.min(r.height+pad*2, vh*0.62);
+    // vh = usable height ABOVE the soundtrack dock; the spot and card must both stay inside it.
+    var r=el.getBoundingClientRect(), pad=8, gap=12, vw=innerWidth, vh=innerHeight-musicH();
+    card.style.width='min(340px,calc(100vw - 28px))';
+    var ch=card.offsetHeight||180, cw=card.offsetWidth||330;
+    // reserve room for the card (plus slack) so a tall target never crowds it against the spot
+    var maxSpotH=Math.max(80, Math.min(vh - ch - gap*4, Math.round(vh*0.58)));
+    var h=Math.min(r.height+pad*2, maxSpotH);
+    // clamp the spot fully within [gap, vh-gap] — never off-screen or behind the dock
+    var top=Math.max(gap, Math.min(r.top-pad, vh-h-gap));
+    var below=(vh-gap)-(top+h), above=top-gap;
+    // if neither side leaves a card-sized gap, nudge the spot toward the roomier edge to open one
+    if(below<ch+gap && above<ch+gap){
+      if(below>=above){ top=Math.max(gap, vh-gap-h-(ch+gap)); }
+      else { top=gap+(ch+gap); }
+      below=(vh-gap)-(top+h); above=top-gap;
+    }
+    var left=Math.max(gap, r.left-pad), w=Math.min(r.width+pad*2, vw-left-gap);
     spot.style.display='block'; spot.style.top=top+'px'; spot.style.left=left+'px';
     spot.style.width=w+'px'; spot.style.height=h+'px';
-    // place card in the larger vertical gap
-    card.style.width='min(340px,calc(100vw - 28px))';
-    var ch=card.offsetHeight||180, below=vh-(top+h), above=top;
-    var cy = (below > ch+18) ? (top+h+12) : (above > ch+18) ? (top-ch-12) : Math.max(10, vh-ch-12);
-    var cx = Math.min(Math.max(8, left), vw - (card.offsetWidth||330) - 8);
+    // drop the card into the larger gap; final clamp keeps it clear of the dock and top edge
+    var cy = (below>=ch+gap) ? (top+h+gap) : (above>=ch+gap) ? (top-ch-gap) : (below>=above ? vh-ch-gap : gap);
+    cy=Math.max(gap, Math.min(cy, vh-ch-gap));
+    var cx=Math.min(Math.max(gap, left), vw-cw-gap);
     card.style.top=cy+'px'; card.style.left=cx+'px';
   }
   function placeCenter(){
