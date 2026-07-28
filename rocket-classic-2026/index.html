@@ -544,6 +544,40 @@ tr[class*="tier-"] td:first-child{position:relative}
   object-position:50% 18%;vertical-align:middle;margin-right:9px;
   background:var(--navy-800);display:inline-block;flex:0 0 auto}
 td.l.name{white-space:nowrap}
+
+/* --- conditions / course-type / pin zones ------------------------- */
+.wxgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px;margin:13px 0}
+.wxday{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);
+  border-radius:10px;padding:11px 12px}
+.wxday .d{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#cbd5e1;font-weight:700}
+.wxday .tl{font-family:'IBM Plex Mono',monospace;font-size:23px;font-weight:800;margin:5px 0 1px}
+.wxday .bk{font-size:9.5px;font-weight:700;letter-spacing:.08em;padding:2px 6px;border-radius:4px}
+.wxday .met{font-size:11px;color:#cbd5e1;margin-top:6px;line-height:1.55}
+.tollspec{position:relative;height:26px;border-radius:6px;overflow:hidden;display:flex;margin:6px 0 3px}
+.tollspec i{display:block;height:100%}
+.tollmarks{position:relative;height:20px;margin-bottom:9px}
+.tollmarks span{position:absolute;transform:translateX(-50%);font-size:9.5px;color:#94a3b8;white-space:nowrap}
+.tollmarks b{position:absolute;transform:translateX(-50%);font-size:10px;font-weight:700;
+  color:#e9c25f;white-space:nowrap}
+.zrow{display:grid;grid-template-columns:150px 1fr 54px;gap:9px;align-items:center;margin:5px 0}
+.zrow .zl{font-size:11.5px;color:#e2e8f0}
+.ztrack{position:relative;height:15px;background:rgba(255,255,255,.05);border-radius:4px}
+.ztrack::before{content:'';position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.28)}
+.ztrack i{position:absolute;top:0;height:100%;border-radius:3px}
+.zval{font-family:'IBM Plex Mono',monospace;font-size:11px;text-align:right;color:#cbd5e1}
+.zonebar{display:flex;height:14px;border-radius:4px;overflow:hidden;min-width:120px;
+  border:1px solid rgba(255,255,255,.10)}
+.zonebar i{display:block;height:100%}
+.fieldgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:7px;margin:12px 0}
+.fp{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:6px 8px;min-width:0}
+.fp img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:50% 18%;
+  background:var(--navy-800);flex:0 0 auto}
+.fp .fn{font-family:'Lora',serif;font-size:12px;color:#e8edf6;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.fp .fs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;margin-left:auto;flex:0 0 auto}
+@media print{.wxday,.fp{background:#fafafa;border-color:#ddd}
+  .wxday .met,.fp .fn{color:#222}}
 @media print{.badge{border:1px solid #999;color:#000!important;background:#eee!important}
   .caveat{background:#f6f6f6;color:#000;border-color:#bbb}
   .renocard,.bigstat .bs{background:#fafafa;border-color:#ddd}
@@ -564,7 +598,7 @@ td.l.name{white-space:nowrap}
       <div class="sub2">A Donald Ross course, rebuilt. First playing of the restoration.</div>
     </div>
   </header>
-  <div class="topnav"><div class="tab-nav"><button class="tab-btn active" data-tab="preview">Pre-Tourney Preview</button><button class="tab-btn" data-tab="holes">Hole by Hole</button></div><div id="sec-nav" class="sec-nav"></div></div>
+  <div class="topnav"><div class="tab-nav"><button class="tab-btn active" data-tab="preview">Pre-Tourney Preview</button><button class="tab-btn" data-tab="holes">Hole by Hole</button><button class="tab-btn" data-tab="pins">Pin Zones</button></div><div id="sec-nav" class="sec-nav"></div></div>
 <div class="tab-panel active" id="tab-preview" data-panel="preview">
 <section class="csec hero-read" id="s-60"><div class="sec-head"><h2 class="font-display">The 60-Second Read</h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
   <ul class="bullets">
@@ -637,6 +671,93 @@ td.l.name{white-space:nowrap}
   treats "same yardage" as "same hole".</div>
 </section>
 
+<section class="csec" id="s-draw"><div class="sec-head"><h2 class="font-display">Conditions &amp; Weather</h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <p class="lead">Sat is the toughest test of the week,
+  Fri the calmest — each day placed against Detroit Golf
+  Club's own historical Toll baseline.</p>
+  <div class="tollmarks"><b style="left:33.75%">Thu</b><b style="left:25.94%">Fri</b><b style="left:35.31%">Sat</b><b style="left:35.00%">Sun</b></div>
+  <div class="tollspec"><i style="width:29.69%;background:rgba(16,185,129,.75)"></i><i style="width:24.22%;background:rgba(132,204,22,.75)"></i><i style="width:21.09%;background:rgba(148,163,184,.75)"></i><i style="width:24.22%;background:rgba(249,115,22,.75)"></i><i style="width:0.78%;background:rgba(239,68,68,.75)"></i></div>
+  <div class="tollmarks"><span style="left:41.56%;top:11px">median 13.3</span><span style="left:64.69%;top:11px">p90 20.7</span><span style="left:76.56%;top:11px">max 24.5</span></div>
+  <p class="fine">Gold markers = forecast play-window Toll per day · bands = canonical Toll
+  buckets (calm &lt;9.5, mild &lt;17.25, moderate &lt;24, windy &lt;31.75) · ticks = Detroit's
+  own 84-day archive median / p90 / max.</p>
+  <div class="wxgrid"><div class="wxday">
+          <div class="d">R1 · Thu 07-30</div>
+          <div class="tl" style="color:rgb(132,204,22)">10.8</div>
+          <div class="bk" style="background:rgba(132,204,22,.18);color:rgb(132,204,22)">MILD</div>
+          <div class="met">88° / 62°<br>
+            Wind 8–10 mph · gust 14<br>
+            Rain 0.00″ · 0% chance</div>
+        </div><div class="wxday">
+          <div class="d">R2 · Fri 07-31</div>
+          <div class="tl" style="color:rgb(16,185,129)">8.3</div>
+          <div class="bk" style="background:rgba(16,185,129,.18);color:rgb(16,185,129)">CALM</div>
+          <div class="met">92° / 70°<br>
+            Wind 6–13 mph · gust 15<br>
+            Rain 0.00″ · 9% chance</div>
+        </div><div class="wxday">
+          <div class="d">R3 · Sat 08-01</div>
+          <div class="tl" style="color:rgb(132,204,22)">11.3</div>
+          <div class="bk" style="background:rgba(132,204,22,.18);color:rgb(132,204,22)">MILD</div>
+          <div class="met">76° / 67°<br>
+            Wind 7–8 mph · gust 19<br>
+            Rain 0.06″ · 21% chance</div>
+        </div><div class="wxday">
+          <div class="d">R4 · Sun 08-02</div>
+          <div class="tl" style="color:rgb(132,204,22)">11.2</div>
+          <div class="bk" style="background:rgba(132,204,22,.18);color:rgb(132,204,22)">MILD</div>
+          <div class="met">80° / 65°<br>
+            Wind 10–13 mph · gust 15<br>
+            Rain 0.00″ · 22% chance</div>
+        </div></div>
+  <p>The week averages 10.4 against a venue median of 13.3 — conditions sit <b>below</b> Detroit's own norm, so the weather is not going to defend the golf course.</p>
+  <div class="caveat"><b>No draw split yet.</b> Tee times are not published yet, so each round is averaged over an assumed 7a-7p window rather than the real draw. Once tee times publish,
+  the AM/PM wave split is what matters — a 3-point Toll gap between waves is worth more than
+  the day-to-day spread shown here.</div>
+</section>
+
+<section class="csec" id="s-secondshot"><div class="sec-head"><h2 class="font-display">What Detroit Rewards — Relative to the Tour <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <p class="lead">Detroit's venue fingerprint against every other archived venue
+  (35 of them). Everything is shown as a z-score, not a raw level — putting
+  correlates with finish at nearly every event, so only the <i>relative</i> figure carries
+  information.</p>
+  <div class="zrow">
+          <div class="zl">Fairways found<div style="font-size:9.5px;color:#94a3b8">Higher = more findable off the tee</div></div>
+          <div class="ztrack"><i style="left:50.00%;width:11.40%;background:#34d399"></i></div>
+          <div class="zval">+0.57σ<div style="font-size:9px;color:#94a3b8">71th</div></div>
+        </div><div class="zrow">
+          <div class="zl">Greens in regulation<div style="font-size:9.5px;color:#94a3b8">Higher = more receptive / shorter approaches</div></div>
+          <div class="ztrack"><i style="left:50.00%;width:23.00%;background:#34d399"></i></div>
+          <div class="zval">+1.15σ<div style="font-size:9px;color:#94a3b8">91th</div></div>
+        </div><div class="zrow">
+          <div class="zl">Off-the-tee separation<div style="font-size:9.5px;color:#94a3b8">How strongly driving tracked finish</div></div>
+          <div class="ztrack"><i style="left:50.00%;width:7.40%;background:#34d399"></i></div>
+          <div class="zval">+0.37σ<div style="font-size:9px;color:#94a3b8">66th</div></div>
+        </div><div class="zrow">
+          <div class="zl">Approach separation<div style="font-size:9.5px;color:#94a3b8">How strongly approach play tracked finish</div></div>
+          <div class="ztrack"><i style="left:47.20%;width:2.80%;background:#f87171"></i></div>
+          <div class="zval">-0.14σ<div style="font-size:9px;color:#94a3b8">49th</div></div>
+        </div><div class="zrow">
+          <div class="zl">Around-green separation<div style="font-size:9.5px;color:#94a3b8">How strongly short game tracked finish</div></div>
+          <div class="ztrack"><i style="left:50.00%;width:8.60%;background:#34d399"></i></div>
+          <div class="zval">+0.43σ<div style="font-size:9px;color:#94a3b8">60th</div></div>
+        </div><div class="zrow">
+          <div class="zl">Putting separation<div style="font-size:9.5px;color:#94a3b8">How strongly putting tracked finish</div></div>
+          <div class="ztrack"><i style="left:46.60%;width:3.40%;background:#f87171"></i></div>
+          <div class="zval">-0.17σ<div style="font-size:9px;color:#94a3b8">34th</div></div>
+        </div>
+  <p style="margin-top:12px">The signature is unmistakable and it is the birdie-fest profile:
+  greens hit in regulation at the <b>91th percentile</b>
+  (72.5% vs a 67.1% Tour norm) and fairways found at the
+  <b>71th</b>. Players simply were not punished here. Nothing separated the
+  field much more than average either — no single skill was the price of admission.</p>
+  <div class="caveat"><b>This is the profile the restoration was built to destroy.</b> Deeper
+  bunkers, fescue, rebuilt greens at ~12½ and two par 5s converted to 500-yard par 4s all
+  attack the same thing: how easy it was to hit greens and make birdies. Expect GIR and
+  fairway rates to fall and the separation numbers to rise. Treat this chart as the
+  <i>baseline being moved away from</i>, not a forecast.</div>
+</section>
+
 <section class="csec" id="s-comps"><div class="sec-head"><h2 class="font-display">Courses That Played Like Detroit <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
   <p class="lead">Every venue fingerprinted on fairway%, GIR% and the four skill-vs-finish
   correlations, z-scored across venues, then ranked by distance from pre-renovation Detroit.
@@ -659,7 +780,7 @@ td.l.name{white-space:nowrap}
   <div class="t-wrap"><table class="rs-tbl stickyrc">
     <thead><tr><th>#</th><th>Player</th><th>Total</th><th>OTT</th><th>APP</th>
       <th>ARG</th><th>PUTT</th><th>Rds</th></tr></thead>
-    <tbody><tr><td data-label="#">1</td><td data-label="Player"><b>Cameron Young</b></td><td data-label="Total">+2.03</td><td data-label="OTT">+0.84</td><td data-label="APP">+0.73</td><td data-label="ARG">+0.32</td><td data-label="PUTT">+0.14</td><td data-label="Rds">60</td></tr><tr><td data-label="#">2</td><td data-label="Player"><b>Si Woo Kim</b></td><td data-label="Total">+1.77</td><td data-label="OTT">+0.52</td><td data-label="APP">+0.75</td><td data-label="ARG">+0.35</td><td data-label="PUTT">+0.12</td><td data-label="Rds">70</td></tr><tr><td data-label="#">3</td><td data-label="Player"><b>Russell Henley</b></td><td data-label="Total">+1.64</td><td data-label="OTT">+0.44</td><td data-label="APP">+0.51</td><td data-label="ARG">+0.19</td><td data-label="PUTT">+0.50</td><td data-label="Rds">50</td></tr><tr><td data-label="#">4</td><td data-label="Player"><b>Xander Schauffele</b></td><td data-label="Total">+1.63</td><td data-label="OTT">+0.72</td><td data-label="APP">+0.58</td><td data-label="ARG">+0.12</td><td data-label="PUTT">+0.23</td><td data-label="Rds">60</td></tr><tr><td data-label="#">5</td><td data-label="Player"><b>Chris Gotterup</b></td><td data-label="Total">+1.61</td><td data-label="OTT">+0.71</td><td data-label="APP">+0.55</td><td data-label="ARG">+0.03</td><td data-label="PUTT">+0.33</td><td data-label="Rds">70</td></tr><tr><td data-label="#">6</td><td data-label="Player"><b>Patrick Cantlay</b></td><td data-label="Total">+1.53</td><td data-label="OTT">+0.45</td><td data-label="APP">+0.65</td><td data-label="ARG">+0.38</td><td data-label="PUTT">+0.10</td><td data-label="Rds">52</td></tr><tr><td data-label="#">7</td><td data-label="Player"><b>Akshay Bhatia</b></td><td data-label="Total">+1.49</td><td data-label="OTT">-0.01</td><td data-label="APP">+0.58</td><td data-label="ARG">+0.25</td><td data-label="PUTT">+0.79</td><td data-label="Rds">56</td></tr><tr><td data-label="#">8</td><td data-label="Player"><b>Jake Knapp</b></td><td data-label="Total">+1.46</td><td data-label="OTT">+0.40</td><td data-label="APP">+0.66</td><td data-label="ARG">-0.15</td><td data-label="PUTT">+0.52</td><td data-label="Rds">44</td></tr><tr><td data-label="#">9</td><td data-label="Player"><b>Wyndham Clark</b></td><td data-label="Total">+1.46</td><td data-label="OTT">+0.14</td><td data-label="APP">+0.54</td><td data-label="ARG">+0.42</td><td data-label="PUTT">+0.40</td><td data-label="Rds">64</td></tr><tr><td data-label="#">10</td><td data-label="Player"><b>Jackson Koivun</b></td><td data-label="Total">+1.37</td><td data-label="OTT">+0.36</td><td data-label="APP">+0.57</td><td data-label="ARG">+0.17</td><td data-label="PUTT">+0.46</td><td data-label="Rds">45</td></tr><tr><td data-label="#">11</td><td data-label="Player"><b>Hideki Matsuyama</b></td><td data-label="Total">+1.30</td><td data-label="OTT">-0.02</td><td data-label="APP">+0.52</td><td data-label="ARG">+0.48</td><td data-label="PUTT">+0.27</td><td data-label="Rds">68</td></tr><tr><td data-label="#">12</td><td data-label="Player"><b>Jacob Bridgeman</b></td><td data-label="Total">+1.28</td><td data-label="OTT">+0.22</td><td data-label="APP">+0.45</td><td data-label="ARG">-0.05</td><td data-label="PUTT">+0.65</td><td data-label="Rds">66</td></tr><tr><td data-label="#">13</td><td data-label="Player"><b>Nicolai Hojgaard</b></td><td data-label="Total">+1.23</td><td data-label="OTT">+0.36</td><td data-label="APP">+0.57</td><td data-label="ARG">+0.17</td><td data-label="PUTT">+0.11</td><td data-label="Rds">62</td></tr><tr><td data-label="#">14</td><td data-label="Player"><b>Harris English</b></td><td data-label="Total">+1.21</td><td data-label="OTT">+0.42</td><td data-label="APP">+0.07</td><td data-label="ARG">+0.08</td><td data-label="PUTT">+0.62</td><td data-label="Rds">60</td></tr><tr><td data-label="#">15</td><td data-label="Player"><b>J.J. Spaun</b></td><td data-label="Total">+1.18</td><td data-label="OTT">+0.33</td><td data-label="APP">+0.96</td><td data-label="ARG">+0.12</td><td data-label="PUTT">-0.21</td><td data-label="Rds">58</td></tr><tr><td data-label="#">16</td><td data-label="Player"><b>Ryan Gerard</b></td><td data-label="Total">+1.10</td><td data-label="OTT">+0.29</td><td data-label="APP">+0.61</td><td data-label="ARG">-0.17</td><td data-label="PUTT">+0.35</td><td data-label="Rds">70</td></tr><tr><td data-label="#">17</td><td data-label="Player"><b>Rickie Fowler</b></td><td data-label="Total">+1.03</td><td data-label="OTT">+0.39</td><td data-label="APP">+0.29</td><td data-label="ARG">-0.05</td><td data-label="PUTT">+0.41</td><td data-label="Rds">58</td></tr><tr><td data-label="#">18</td><td data-label="Player"><b>Ben Griffin</b></td><td data-label="Total">+1.03</td><td data-label="OTT">+0.01</td><td data-label="APP">+0.12</td><td data-label="ARG">+0.44</td><td data-label="PUTT">+0.46</td><td data-label="Rds">68</td></tr><tr><td data-label="#">19</td><td data-label="Player"><b>Ryo Hisatsune</b></td><td data-label="Total">+0.93</td><td data-label="OTT">+0.49</td><td data-label="APP">+0.50</td><td data-label="ARG">-0.01</td><td data-label="PUTT">-0.03</td><td data-label="Rds">76</td></tr><tr><td data-label="#">20</td><td data-label="Player"><b>Nick Taylor</b></td><td data-label="Total">+0.87</td><td data-label="OTT">-0.11</td><td data-label="APP">+0.39</td><td data-label="ARG">+0.26</td><td data-label="PUTT">+0.32</td><td data-label="Rds">68</td></tr><tr><td data-label="#">21</td><td data-label="Player"><b>Brooks Koepka</b></td><td data-label="Total">+0.85</td><td data-label="OTT">+0.37</td><td data-label="APP">+0.58</td><td data-label="ARG">+0.07</td><td data-label="PUTT">-0.18</td><td data-label="Rds">49</td></tr><tr><td data-label="#">22</td><td data-label="Player"><b>Keegan Bradley</b></td><td data-label="Total">+0.81</td><td data-label="OTT">+0.20</td><td data-label="APP">+0.27</td><td data-label="ARG">+0.33</td><td data-label="PUTT">+0.03</td><td data-label="Rds">62</td></tr><tr><td data-label="#">23</td><td data-label="Player"><b>Mac Meissner</b></td><td data-label="Total">+0.80</td><td data-label="OTT">-0.07</td><td data-label="APP">+0.25</td><td data-label="ARG">+0.27</td><td data-label="PUTT">+0.35</td><td data-label="Rds">58</td></tr><tr><td data-label="#">24</td><td data-label="Player"><b>Eric Cole</b></td><td data-label="Total">+0.77</td><td data-label="OTT">-0.39</td><td data-label="APP">+0.23</td><td data-label="ARG">+0.41</td><td data-label="PUTT">+0.53</td><td data-label="Rds">64</td></tr><tr><td data-label="#">25</td><td data-label="Player"><b>Michael Thorbjornsen</b></td><td data-label="Total">+0.69</td><td data-label="OTT">+0.40</td><td data-label="APP">+0.16</td><td data-label="ARG">+0.36</td><td data-label="PUTT">-0.27</td><td data-label="Rds">62</td></tr><tr><td data-label="#">26</td><td data-label="Player"><b>Jordan Spieth</b></td><td data-label="Total">+0.67</td><td data-label="OTT">+0.16</td><td data-label="APP">+0.28</td><td data-label="ARG">+0.09</td><td data-label="PUTT">+0.14</td><td data-label="Rds">66</td></tr><tr><td data-label="#">27</td><td data-label="Player"><b>Sudarshan Yellamaraju</b></td><td data-label="Total">+0.61</td><td data-label="OTT">+0.38</td><td data-label="APP">+0.07</td><td data-label="ARG">-0.08</td><td data-label="PUTT">+0.26</td><td data-label="Rds">66</td></tr><tr><td data-label="#">28</td><td data-label="Player"><b>Jordan Smith</b></td><td data-label="Total">+0.55</td><td data-label="OTT">+0.55</td><td data-label="APP">+0.44</td><td data-label="ARG">-0.15</td><td data-label="PUTT">-0.24</td><td data-label="Rds">56</td></tr><tr><td data-label="#">29</td><td data-label="Player"><b>Corey Conners</b></td><td data-label="Total">+0.55</td><td data-label="OTT">+0.13</td><td data-label="APP">+0.51</td><td data-label="ARG">+0.03</td><td data-label="PUTT">-0.12</td><td data-label="Rds">68</td></tr><tr><td data-label="#">30</td><td data-label="Player"><b>Matt Wallace</b></td><td data-label="Total">+0.53</td><td data-label="OTT">-0.04</td><td data-label="APP">+0.51</td><td data-label="ARG">+0.23</td><td data-label="PUTT">-0.05</td><td data-label="Rds">60</td></tr></tbody>
+    <tbody><tr><td data-label="#">1</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57366.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Cameron Young</b></td><td data-label="Total">+2.03</td><td data-label="OTT">+0.84</td><td data-label="APP">+0.73</td><td data-label="ARG">+0.32</td><td data-label="PUTT">+0.14</td><td data-label="Rds">60</td></tr><tr><td data-label="#">2</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_37455.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Si Woo Kim</b></td><td data-label="Total">+1.77</td><td data-label="OTT">+0.52</td><td data-label="APP">+0.75</td><td data-label="ARG">+0.35</td><td data-label="PUTT">+0.12</td><td data-label="Rds">70</td></tr><tr><td data-label="#">3</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34098.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Russell Henley</b></td><td data-label="Total">+1.64</td><td data-label="OTT">+0.44</td><td data-label="APP">+0.51</td><td data-label="ARG">+0.19</td><td data-label="PUTT">+0.50</td><td data-label="Rds">50</td></tr><tr><td data-label="#">4</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_48081.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Xander Schauffele</b></td><td data-label="Total">+1.63</td><td data-label="OTT">+0.72</td><td data-label="APP">+0.58</td><td data-label="ARG">+0.12</td><td data-label="PUTT">+0.23</td><td data-label="Rds">60</td></tr><tr><td data-label="#">5</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59095.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Chris Gotterup</b></td><td data-label="Total">+1.61</td><td data-label="OTT">+0.71</td><td data-label="APP">+0.55</td><td data-label="ARG">+0.03</td><td data-label="PUTT">+0.33</td><td data-label="Rds">70</td></tr><tr><td data-label="#">6</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35450.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Patrick Cantlay</b></td><td data-label="Total">+1.53</td><td data-label="OTT">+0.45</td><td data-label="APP">+0.65</td><td data-label="ARG">+0.38</td><td data-label="PUTT">+0.10</td><td data-label="Rds">52</td></tr><tr><td data-label="#">7</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_56630.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Akshay Bhatia</b></td><td data-label="Total">+1.49</td><td data-label="OTT">-0.01</td><td data-label="APP">+0.58</td><td data-label="ARG">+0.25</td><td data-label="PUTT">+0.79</td><td data-label="Rds">56</td></tr><tr><td data-label="#">8</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47420.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Jake Knapp</b></td><td data-label="Total">+1.46</td><td data-label="OTT">+0.40</td><td data-label="APP">+0.66</td><td data-label="ARG">-0.15</td><td data-label="PUTT">+0.52</td><td data-label="Rds">44</td></tr><tr><td data-label="#">9</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51766.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Wyndham Clark</b></td><td data-label="Total">+1.46</td><td data-label="OTT">+0.14</td><td data-label="APP">+0.54</td><td data-label="ARG">+0.42</td><td data-label="PUTT">+0.40</td><td data-label="Rds">64</td></tr><tr><td data-label="#">10</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_66701.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Jackson Koivun</b></td><td data-label="Total">+1.37</td><td data-label="OTT">+0.36</td><td data-label="APP">+0.57</td><td data-label="ARG">+0.17</td><td data-label="PUTT">+0.46</td><td data-label="Rds">45</td></tr><tr><td data-label="#">11</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_32839.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Hideki Matsuyama</b></td><td data-label="Total">+1.30</td><td data-label="OTT">-0.02</td><td data-label="APP">+0.52</td><td data-label="ARG">+0.48</td><td data-label="PUTT">+0.27</td><td data-label="Rds">68</td></tr><tr><td data-label="#">12</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_60004.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Jacob Bridgeman</b></td><td data-label="Total">+1.28</td><td data-label="OTT">+0.22</td><td data-label="APP">+0.45</td><td data-label="ARG">-0.05</td><td data-label="PUTT">+0.65</td><td data-label="Rds">66</td></tr><tr><td data-label="#">13</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_52453.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Nicolai Hojgaard</b></td><td data-label="Total">+1.23</td><td data-label="OTT">+0.36</td><td data-label="APP">+0.57</td><td data-label="ARG">+0.17</td><td data-label="PUTT">+0.11</td><td data-label="Rds">62</td></tr><tr><td data-label="#">14</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34099.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Harris English</b></td><td data-label="Total">+1.21</td><td data-label="OTT">+0.42</td><td data-label="APP">+0.07</td><td data-label="ARG">+0.08</td><td data-label="PUTT">+0.62</td><td data-label="Rds">60</td></tr><tr><td data-label="#">15</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39324.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>J.J. Spaun</b></td><td data-label="Total">+1.18</td><td data-label="OTT">+0.33</td><td data-label="APP">+0.96</td><td data-label="ARG">+0.12</td><td data-label="PUTT">-0.21</td><td data-label="Rds">58</td></tr><tr><td data-label="#">16</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59018.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Ryan Gerard</b></td><td data-label="Total">+1.10</td><td data-label="OTT">+0.29</td><td data-label="APP">+0.61</td><td data-label="ARG">-0.17</td><td data-label="PUTT">+0.35</td><td data-label="Rds">70</td></tr><tr><td data-label="#">17</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_32102.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Rickie Fowler</b></td><td data-label="Total">+1.03</td><td data-label="OTT">+0.39</td><td data-label="APP">+0.29</td><td data-label="ARG">-0.05</td><td data-label="PUTT">+0.41</td><td data-label="Rds">58</td></tr><tr><td data-label="#">18</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54591.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Ben Griffin</b></td><td data-label="Total">+1.03</td><td data-label="OTT">+0.01</td><td data-label="APP">+0.12</td><td data-label="ARG">+0.44</td><td data-label="PUTT">+0.46</td><td data-label="Rds">68</td></tr><tr><td data-label="#">19</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51287.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Ryo Hisatsune</b></td><td data-label="Total">+0.93</td><td data-label="OTT">+0.49</td><td data-label="APP">+0.50</td><td data-label="ARG">-0.01</td><td data-label="PUTT">-0.03</td><td data-label="Rds">76</td></tr><tr><td data-label="#">20</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_25493.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Nick Taylor</b></td><td data-label="Total">+0.87</td><td data-label="OTT">-0.11</td><td data-label="APP">+0.39</td><td data-label="ARG">+0.26</td><td data-label="PUTT">+0.32</td><td data-label="Rds">68</td></tr><tr><td data-label="#">21</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36689.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Brooks Koepka</b></td><td data-label="Total">+0.85</td><td data-label="OTT">+0.37</td><td data-label="APP">+0.58</td><td data-label="ARG">+0.07</td><td data-label="PUTT">-0.18</td><td data-label="Rds">49</td></tr><tr><td data-label="#">22</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_33141.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Keegan Bradley</b></td><td data-label="Total">+0.81</td><td data-label="OTT">+0.20</td><td data-label="APP">+0.27</td><td data-label="ARG">+0.33</td><td data-label="PUTT">+0.03</td><td data-label="Rds">62</td></tr><tr><td data-label="#">23</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59143.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Mac Meissner</b></td><td data-label="Total">+0.80</td><td data-label="OTT">-0.07</td><td data-label="APP">+0.25</td><td data-label="ARG">+0.27</td><td data-label="PUTT">+0.35</td><td data-label="Rds">58</td></tr><tr><td data-label="#">24</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47591.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Eric Cole</b></td><td data-label="Total">+0.77</td><td data-label="OTT">-0.39</td><td data-label="APP">+0.23</td><td data-label="ARG">+0.41</td><td data-label="PUTT">+0.53</td><td data-label="Rds">64</td></tr><tr><td data-label="#">25</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57364.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Michael Thorbjornsen</b></td><td data-label="Total">+0.69</td><td data-label="OTT">+0.40</td><td data-label="APP">+0.16</td><td data-label="ARG">+0.36</td><td data-label="PUTT">-0.27</td><td data-label="Rds">62</td></tr><tr><td data-label="#">26</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34046.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Jordan Spieth</b></td><td data-label="Total">+0.67</td><td data-label="OTT">+0.16</td><td data-label="APP">+0.28</td><td data-label="ARG">+0.09</td><td data-label="PUTT">+0.14</td><td data-label="Rds">66</td></tr><tr><td data-label="#">27</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_60386.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Sudarshan Yellamaraju</b></td><td data-label="Total">+0.61</td><td data-label="OTT">+0.38</td><td data-label="APP">+0.07</td><td data-label="ARG">-0.08</td><td data-label="PUTT">+0.26</td><td data-label="Rds">66</td></tr><tr><td data-label="#">28</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_46464.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Jordan Smith</b></td><td data-label="Total">+0.55</td><td data-label="OTT">+0.55</td><td data-label="APP">+0.44</td><td data-label="ARG">-0.15</td><td data-label="PUTT">-0.24</td><td data-label="Rds">56</td></tr><tr><td data-label="#">29</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39997.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Corey Conners</b></td><td data-label="Total">+0.55</td><td data-label="OTT">+0.13</td><td data-label="APP">+0.51</td><td data-label="ARG">+0.03</td><td data-label="PUTT">-0.12</td><td data-label="Rds">68</td></tr><tr><td data-label="#">30</td><td class="l name" data-label="Player"><img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_48887.png" alt="" loading="lazy" onerror="this.style.display='none'"><b>Matt Wallace</b></td><td data-label="Total">+0.53</td><td data-label="OTT">-0.04</td><td data-label="APP">+0.51</td><td data-label="ARG">+0.23</td><td data-label="PUTT">-0.05</td><td data-label="Rds">60</td></tr></tbody>
   </table></div>
   <p class="fine">Span: Last 6 Months. Values are per round versus a typical
   Tour field.</p>
@@ -688,6 +809,28 @@ td.l.name{white-space:nowrap}
   the new long par 4s, which the off-the-tee number already captures.</p>
 </section>
 
+<section class="csec" id="s-babe"><div class="sec-head"><h2 class="font-display">Babe's Babes — Putting &amp; the Putting Trap <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <p class="lead">Putting tracked finish at r=-0.52 — against a Tour-wide average of
+  -0.51. That is essentially the tour norm, which means it is noise, not Detroit's edge.</p>
+  <div class="bigstat">
+    <div class="bs"><div class="v">-0.523</div><div class="l">putting r with finish, Detroit</div></div>
+    <div class="bs"><div class="v">-0.505</div><div class="l">Tour-wide average</div></div>
+    <div class="bs"><div class="v">13<span style="font-size:15px">/35</span></div>
+      <div class="l">rank among archived venues</div></div>
+  </div>
+  <p><b>The tempting (wrong) read:</b> putting correlated with finish, so back the hot putter.
+  That is the putting trap. Putting correlates with finish at <i>nearly every event</i> — it is
+  noisy, and making putts is simply how scoring happens. The only informative question is
+  whether it mattered <i>more here than elsewhere</i>, and at Detroit it did not:
+  -0.018 versus the Tour mean, ranking 13 of 35. Middle of the pack.</p>
+  <p><b>What the restoration does to this.</b> This is the one read most likely to change.
+  Greens were rebuilt to Ross's original contours, raised, expanded, and are running near 12½
+  — more slope, more speed and more pin positions than the greens these correlations were
+  measured on. If any number in this document moves, it is this one, and it moves
+  <i>upward</i>. That is a reason to respect putting this week, but it is a structural
+  argument, not something the history supports.</p>
+</section>
+
 <section class="csec" id="s-history"><div class="sec-head"><h2 class="font-display">Course History — This Week's Field at Detroit
     <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
   <p class="lead">Scoring across the 16 holes that kept their par, 2019–2025, normalized per
@@ -708,6 +851,602 @@ td.l.name{white-space:nowrap}
   baseline, and a soft week cannot inflate it. Ball-striking is the part of a Detroit record
   most likely to carry: the greens that drove the old putting and around-green numbers no
   longer exist.</p>
+</section>
+
+<section class="csec" id="s-field"><div class="sec-head"><h2 class="font-display">The Field — 147 Players</h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <p class="lead">This week's field with DataGolf 6-month true SG total.
+  <span style="color:#e9c25f">&#9679;</span> = has played Detroit before (99 of 147).</p>
+  <div class="fieldgrid"><div class="fp">
+          <span style="width:30px;height:30px;border-radius:50%;background:var(--navy-800);flex:0 0 auto;display:inline-block"></span>
+          <span class="fn">Daniel Azallion</span>
+          <span class="fs" style="color:#f87171">-3.04</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_48001.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Zach Bauchou</span>
+          <span class="fs" style="color:#34d399">+0.50</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_45522.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Christiaan Bezuidenhout</span>
+          <span class="fs" style="color:#34d399">+0.44</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_56630.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Akshay Bhatia</span>
+          <span class="fs" style="color:#34d399">+1.49</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_40058.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Zac Blair</span>
+          <span class="fs" style="color:#34d399">+0.30</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54788.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Chandler Blanchet</span>
+          <span class="fs" style="color:#f87171">-0.48</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_33141.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Keegan Bradley</span>
+          <span class="fs" style="color:#34d399">+0.81</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_61522.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Michael Brennan</span>
+          <span class="fs" style="color:#34d399">+0.36</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_60004.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Jacob Bridgeman</span>
+          <span class="fs" style="color:#34d399">+1.28</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_46443.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Brian Campbell</span>
+          <span class="fs" style="color:#f87171">-1.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_32070.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Rafael Campos</span>
+          <span class="fs" style="color:#f87171">-1.72</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35450.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Patrick Cantlay</span>
+          <span class="fs" style="color:#34d399">+1.53</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59440.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Ricky Castillo</span>
+          <span class="fs" style="color:#34d399">+0.40</span>
+        </div><div class="fp">
+          <span style="width:30px;height:30px;border-radius:50%;background:var(--navy-800);flex:0 0 auto;display:inline-block"></span>
+          <span class="fn">Ryan Celano</span>
+          <span class="fs" style="color:#f87171">-9999.00</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59006.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Davis Chatfield</span>
+          <span class="fs" style="color:#f87171">-0.50</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_66743.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Luke Clanton</span>
+          <span class="fs" style="color:#f87171">-0.90</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51766.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Wyndham Clark</span>
+          <span class="fs" style="color:#34d399">+1.46</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47591.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Eric Cole</span>
+          <span class="fs" style="color:#34d399">+0.77</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39997.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Corey Conners</span>
+          <span class="fs" style="color:#34d399">+0.55</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59836.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Pierceson Coody</span>
+          <span class="fs" style="color:#34d399">+0.53</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_52514.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Trace Crowe</span>
+          <span class="fs" style="color:#f87171">-0.30</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34076.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Joel Dahmen</span>
+          <span class="fs" style="color:#f87171">-0.19</span>
+        </div><div class="fp">
+          <span style="width:30px;height:30px;border-radius:50%;background:var(--navy-800);flex:0 0 auto;display:inline-block"></span>
+          <span class="fn">Brad Dalke</span>
+          <span class="fs" style="color:#34d399">+0.12</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_45157.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Cam Davis</span>
+          <span class="fs" style="color:#f87171">-1.62</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_37338.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Zecheng Dou</span>
+          <span class="fs" style="color:#34d399">+0.24</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_50497.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Adrien Dumont De Chassart</span>
+          <span class="fs" style="color:#34d399">+0.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59866.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Nick Dunlap</span>
+          <span class="fs" style="color:#f87171">-0.59</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51349.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Nico Echavarria</span>
+          <span class="fs" style="color:#34d399">+0.24</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57362.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Austin Eckroat</span>
+          <span class="fs" style="color:#f87171">-0.04</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34099.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Harris English</span>
+          <span class="fs" style="color:#34d399">+1.21</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_50286.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">A.J. Ewart</span>
+          <span class="fs" style="color:#34d399">+0.26</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_29725.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Tony Finau</span>
+          <span class="fs" style="color:#34d399">+0.31</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54576.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Patrick Fishburn</span>
+          <span class="fs" style="color:#f87171">-0.38</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57123.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Steven Fisk</span>
+          <span class="fs" style="color:#34d399">+0.19</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_32102.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Rickie Fowler</span>
+          <span class="fs" style="color:#34d399">+1.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_29535.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Brice Garnett</span>
+          <span class="fs" style="color:#f87171">-1.02</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59018.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Ryan Gerard</span>
+          <span class="fs" style="color:#34d399">+1.10</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_52375.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Doug Ghim</span>
+          <span class="fs" style="color:#34d399">+0.51</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_25900.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Lucas Glover</span>
+          <span class="fs" style="color:#f87171">-0.29</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59095.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Chris Gotterup</span>
+          <span class="fs" style="color:#34d399">+1.61</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51977.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Max Greyserman</span>
+          <span class="fs" style="color:#34d399">+0.17</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54591.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Ben Griffin</span>
+          <span class="fs" style="color:#34d399">+1.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35310.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Lanto Griffin</span>
+          <span class="fs" style="color:#f87171">-0.30</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_31646.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Emiliano Grillo</span>
+          <span class="fs" style="color:#34d399">+0.09</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57975.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Harry Hall</span>
+          <span class="fs" style="color:#34d399">+0.33</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34098.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Russell Henley</span>
+          <span class="fs" style="color:#34d399">+1.64</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54421.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Garrick Higgo</span>
+          <span class="fs" style="color:#f87171">-1.02</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_60067.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Joe Highsmith</span>
+          <span class="fs" style="color:#f87171">-1.07</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_49120.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Kensei Hirata</span>
+          <span class="fs" style="color:#f87171">-1.39</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51287.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Ryo Hisatsune</span>
+          <span class="fs" style="color:#34d399">+0.93</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54628.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Lee Hodges</span>
+          <span class="fs" style="color:#34d399">+0.09</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51696.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Rico Hoey</span>
+          <span class="fs" style="color:#f87171">-0.19</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35532.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Tom Hoge</span>
+          <span class="fs" style="color:#f87171">-0.30</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_52453.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Nicolai Hojgaard</span>
+          <span class="fs" style="color:#34d399">+1.23</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_52686.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Rasmus Hojgaard</span>
+          <span class="fs" style="color:#f87171">-0.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59862.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Joe Hooks</span>
+          <span class="fs" style="color:#f87171">-9999.00</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_29420.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Billy Horschel</span>
+          <span class="fs" style="color:#f87171">-0.04</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35461.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Beau Hossler</span>
+          <span class="fs" style="color:#34d399">+0.05</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36801.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Mark Hubbard</span>
+          <span class="fs" style="color:#f87171">-0.39</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35506.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Mackenzie Hughes</span>
+          <span class="fs" style="color:#34d399">+0.24</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_56926.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Keenan Huskey</span>
+          <span class="fs" style="color:#f87171">-0.49</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39971.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Sungjae Im</span>
+          <span class="fs" style="color:#34d399">+0.26</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36799.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Stephan Jaeger</span>
+          <span class="fs" style="color:#34d399">+0.21</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57869.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Ben James</span>
+          <span class="fs" style="color:#34d399">+0.50</span>
+        </div><div class="fp">
+          <span style="width:30px;height:30px;border-radius:50%;background:var(--navy-800);flex:0 0 auto;display:inline-block"></span>
+          <span class="fn">William Jennings</span>
+          <span class="fs" style="color:#f87171">-0.27</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47917.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Takumi Kanaya</span>
+          <span class="fs" style="color:#f87171">-0.37</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47393.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Jeffrey Kang</span>
+          <span class="fs" style="color:#f87171">-1.09</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_63454.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Johnny Keefer</span>
+          <span class="fs" style="color:#34d399">+0.09</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_37455.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Si Woo Kim</span>
+          <span class="fs" style="color:#34d399">+1.77</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39975.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Michael Kim</span>
+          <span class="fs" style="color:#34d399">+0.45</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_30926.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Chris Kirk</span>
+          <span class="fs" style="color:#f87171">-0.04</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_32757.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Patton Kizzire</span>
+          <span class="fs" style="color:#f87171">-2.14</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47420.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Jake Knapp</span>
+          <span class="fs" style="color:#34d399">+1.46</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36689.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Brooks Koepka</span>
+          <span class="fs" style="color:#34d399">+0.85</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36884.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Ben Kohles</span>
+          <span class="fs" style="color:#34d399">+0.41</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_66701.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Jackson Koivun</span>
+          <span class="fs" style="color:#34d399">+1.37</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_23108.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Matt Kuchar</span>
+          <span class="fs" style="color:#f87171">-0.37</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54422.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Christo Lamprecht</span>
+          <span class="fs" style="color:#f87171">-1.69</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_49766.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Hank Lebioda</span>
+          <span class="fs" style="color:#f87171">-0.63</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35296.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Haotong Li</span>
+          <span class="fs" style="color:#f87171">-0.41</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36326.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> David Lipsky</span>
+          <span class="fs" style="color:#f87171">-0.05</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_40162.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Justin Lower</span>
+          <span class="fs" style="color:#f87171">-1.09</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34466.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Peter Malnati</span>
+          <span class="fs" style="color:#f87171">-0.95</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_32839.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Hideki Matsuyama</span>
+          <span class="fs" style="color:#34d399">+1.30</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_49037.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Stefano Mazzoli</span>
+          <span class="fs" style="color:#f87171">-1.22</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47993.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Denny McCarthy</span>
+          <span class="fs" style="color:#34d399">+0.39</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59141.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Matt McCarty</span>
+          <span class="fs" style="color:#34d399">+0.36</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51950.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Max McGreevy</span>
+          <span class="fs" style="color:#34d399">+0.30</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_59143.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Mac Meissner</span>
+          <span class="fs" style="color:#34d399">+0.80</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_49947.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Taylor Moore</span>
+          <span class="fs" style="color:#34d399">+0.16</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_63121.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> William Mouw</span>
+          <span class="fs" style="color:#34d399">+0.25</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_49228.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Keita Nakajima</span>
+          <span class="fs" style="color:#34d399">+0.18</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_52689.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Rasmus Neergaard-Petersen</span>
+          <span class="fs" style="color:#34d399">+0.21</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51997.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Andrew Novak</span>
+          <span class="fs" style="color:#34d399">+0.27</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_55851.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Pontus Nyholm</span>
+          <span class="fs" style="color:#f87171">-0.31</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_33968.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Thorbjorn Olesen</span>
+          <span class="fs" style="color:#f87171">-0.50</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_28723.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">John Parry</span>
+          <span class="fs" style="color:#34d399">+0.08</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_48153.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Matthieu Pavon</span>
+          <span class="fs" style="color:#f87171">-0.13</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_40250.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Taylor Pendrith</span>
+          <span class="fs" style="color:#f87171">-0.09</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51003.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Marco Penge</span>
+          <span class="fs" style="color:#34d399">+0.01</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57900.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Chandler Phillips</span>
+          <span class="fs" style="color:#f87171">-0.38</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_63343.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Aldrich Potgieter</span>
+          <span class="fs" style="color:#34d399">+0.06</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_28252.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Seamus Power</span>
+          <span class="fs" style="color:#34d399">+0.06</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34256.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Andrew Putnam</span>
+          <span class="fs" style="color:#34d399">+0.40</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36327.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Justin Quiban</span>
+          <span class="fs" style="color:#f87171">-3.58</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47983.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Chad Ramey</span>
+          <span class="fs" style="color:#f87171">-0.13</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47995.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Davis Riley</span>
+          <span class="fs" style="color:#f87171">-1.58</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_36699.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Patrick Rodgers</span>
+          <span class="fs" style="color:#f87171">-0.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39335.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Kevin Roy</span>
+          <span class="fs" style="color:#f87171">-0.07</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_37076.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Marcelo Rozo</span>
+          <span class="fs" style="color:#f87171">-1.53</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39251.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Ryan Ruffels</span>
+          <span class="fs" style="color:#f87171">-0.40</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34371.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Adrien Saddier</span>
+          <span class="fs" style="color:#f87171">-0.68</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_64442.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Gordon Sargent</span>
+          <span class="fs" style="color:#f87171">-1.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_48081.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Xander Schauffele</span>
+          <span class="fs" style="color:#34d399">+1.63</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_47347.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Adam Schenk</span>
+          <span class="fs" style="color:#f87171">-1.25</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_48867.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Matti Schmid</span>
+          <span class="fs" style="color:#34d399">+0.06</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_63807.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Neal Shipley</span>
+          <span class="fs" style="color:#f87171">-0.79</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_29221.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Webb Simpson</span>
+          <span class="fs" style="color:#f87171">-0.59</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_46464.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Jordan Smith</span>
+          <span class="fs" style="color:#34d399">+0.55</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_50095.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Austin Smotherman</span>
+          <span class="fs" style="color:#34d399">+0.05</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_27649.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Brandt Snedeker</span>
+          <span class="fs" style="color:#f87171">-0.25</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_39324.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> J.J. Spaun</span>
+          <span class="fs" style="color:#34d399">+1.18</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_34046.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Jordan Spieth</span>
+          <span class="fs" style="color:#34d399">+0.67</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_50484.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Hayden Springer</span>
+          <span class="fs" style="color:#f87171">-0.74</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_55893.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Sam Stevens</span>
+          <span class="fs" style="color:#34d399">+0.33</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_27214.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Kevin Streelman</span>
+          <span class="fs" style="color:#f87171">-0.28</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_60019.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Jackson Suber</span>
+          <span class="fs" style="color:#34d399">+0.35</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57586.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Jesper Svensson</span>
+          <span class="fs" style="color:#f87171">-0.17</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_40115.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Adam Svensson</span>
+          <span class="fs" style="color:#f87171">-0.88</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_25493.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Nick Taylor</span>
+          <span class="fs" style="color:#34d399">+0.87</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_58168.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Davis Thompson</span>
+          <span class="fs" style="color:#34d399">+0.45</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57364.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Michael Thorbjornsen</span>
+          <span class="fs" style="color:#34d399">+0.69</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_30927.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Brendon Todd</span>
+          <span class="fs" style="color:#f87171">-2.48</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_38991.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Alejandro Tosti</span>
+          <span class="fs" style="color:#f87171">-1.57</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_40006.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Erik Van Rooyen</span>
+          <span class="fs" style="color:#f87171">-0.31</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_55573.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">John VanDerLaan</span>
+          <span class="fs" style="color:#f87171">-0.80</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_35658.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Kristoffer Ventura</span>
+          <span class="fs" style="color:#f87171">-0.14</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54304.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Karl Vilips</span>
+          <span class="fs" style="color:#f87171">-0.20</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54607.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Danny Walker</span>
+          <span class="fs" style="color:#f87171">-1.27</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_48887.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Matt Wallace</span>
+          <span class="fs" style="color:#34d399">+0.53</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_51894.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Vince Whaley</span>
+          <span class="fs" style="color:#f87171">-0.60</span>
+        </div><div class="fp">
+          <span style="width:30px;height:30px;border-radius:50%;background:var(--navy-800);flex:0 0 auto;display:inline-block"></span>
+          <span class="fn">Patrick Wilkes-Krier</span>
+          <span class="fs" style="color:#f87171">-9999.00</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_49964.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Aaron Wise</span>
+          <span class="fs" style="color:#f87171">-0.85</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_54783.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Dylan Wu</span>
+          <span class="fs" style="color:#f87171">-0.96</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_60386.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn">Sudarshan Yellamaraju</span>
+          <span class="fs" style="color:#34d399">+0.61</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_57366.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Cameron Young</span>
+          <span class="fs" style="color:#34d399">+2.03</span>
+        </div><div class="fp">
+          <img class="hs" src="https://pga-tour-res.cloudinary.com/image/upload/c_fill,g_face:center,h_160,w_160,q_auto/headshots_45242.png" alt="" loading="lazy" onerror="this.style.display='none'">
+          <span class="fn"><span title="has played Detroit" style="color:#e9c25f">&#9679;</span> Kevin Yu</span>
+          <span class="fs" style="color:#f87171">-0.06</span>
+        </div></div>
+  <p class="fine">Field from the DataGolf Rocket Classic player group. Tourcast tee times had
+  not published when this was generated, so alternates may still move and no draw is shown.</p>
 </section></div>
 <div class="tab-panel" id="tab-holes" data-panel="holes">
 <section class="csec" id="s-holes"><div class="sec-head"><h2 class="font-display">What Changed — And What Survives It</h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
@@ -761,6 +1500,41 @@ td.l.name{white-space:nowrap}
     <tbody><tr><td data-label="Rank">1</td><td data-label="Hole"><b>11</b></td><td data-label="Par">3</td><td data-label="± Par" class="up">+0.148</td><td data-label="Scoring">3.15</td><td data-label="Bird %">8.8%</td><td data-label="Bog+ %">22.9%</td><td data-label="σ">0.57</td></tr><tr><td data-label="Rank">2</td><td data-label="Hole"><b>6</b></td><td data-label="Par">4</td><td data-label="± Par" class="up">+0.120</td><td data-label="Scoring">4.12</td><td data-label="Bird %">10.5%</td><td data-label="Bog+ %">21.6%</td><td data-label="σ">0.58</td></tr><tr><td data-label="Rank">3</td><td data-label="Hole"><b>12</b></td><td data-label="Par">4</td><td data-label="± Par" class="up">+0.093</td><td data-label="Scoring">4.09</td><td data-label="Bird %">11.6%</td><td data-label="Bog+ %">19.7%</td><td data-label="σ">0.59</td></tr><tr><td data-label="Rank">4</td><td data-label="Hole"><b>9</b></td><td data-label="Par">3</td><td data-label="± Par" class="up">+0.080</td><td data-label="Scoring">3.08</td><td data-label="Bird %">11.9%</td><td data-label="Bog+ %">18.7%</td><td data-label="σ">0.58</td></tr><tr><td data-label="Rank">5</td><td data-label="Hole"><b>18</b></td><td data-label="Par">4</td><td data-label="± Par" class="up">+0.079</td><td data-label="Scoring">4.08</td><td data-label="Bird %">13.7%</td><td data-label="Bog+ %">19.6%</td><td data-label="σ">0.63</td></tr><tr><td data-label="Rank">6</td><td data-label="Hole"><b>16</b></td><td data-label="Par">4</td><td data-label="± Par" class="up">+0.012</td><td data-label="Scoring">4.01</td><td data-label="Bird %">13.6%</td><td data-label="Bog+ %">14.3%</td><td data-label="σ">0.55</td></tr><tr><td data-label="Rank">7</td><td data-label="Hole"><b>2</b></td><td data-label="Par">4</td><td data-label="± Par" class="dn">-0.008</td><td data-label="Scoring">3.99</td><td data-label="Bird %">17.1%</td><td data-label="Bog+ %">14.3%</td><td data-label="σ">0.62</td></tr><tr><td data-label="Rank">8</td><td data-label="Hole"><b>15</b></td><td data-label="Par">3</td><td data-label="± Par" class="dn">-0.065</td><td data-label="Scoring">2.94</td><td data-label="Bird %">18.6%</td><td data-label="Bog+ %">11.5%</td><td data-label="σ">0.56</td></tr><tr><td data-label="Rank">9</td><td data-label="Hole"><b>13</b></td><td data-label="Par">4</td><td data-label="± Par" class="dn">-0.073</td><td data-label="Scoring">3.93</td><td data-label="Bird %">20.8%</td><td data-label="Bog+ %">13.1%</td><td data-label="σ">0.60</td></tr><tr><td data-label="Rank">10</td><td data-label="Hole"><b>8</b></td><td data-label="Par">4</td><td data-label="± Par" class="dn">-0.084</td><td data-label="Scoring">3.92</td><td data-label="Bird %">21.6%</td><td data-label="Bog+ %">12.5%</td><td data-label="σ">0.60</td></tr><tr><td data-label="Rank">11</td><td data-label="Hole"><b>5</b></td><td data-label="Par">3</td><td data-label="± Par" class="dn">-0.092</td><td data-label="Scoring">2.91</td><td data-label="Bird %">19.9%</td><td data-label="Bog+ %">10.1%</td><td data-label="σ">0.56</td></tr><tr><td data-label="Rank">12</td><td data-label="Hole"><b>10</b></td><td data-label="Par">4</td><td data-label="± Par" class="dn">-0.124</td><td data-label="Scoring">3.88</td><td data-label="Bird %">23.6%</td><td data-label="Bog+ %">10.5%</td><td data-label="σ">0.60</td></tr><tr><td data-label="Rank">13</td><td data-label="Hole"><b>1</b></td><td data-label="Par">4</td><td data-label="± Par" class="dn">-0.153</td><td data-label="Scoring">3.85</td><td data-label="Bird %">24.1%</td><td data-label="Bog+ %">8.6%</td><td data-label="σ">0.57</td></tr><tr><td data-label="Rank">14</td><td data-label="Hole"><b>3</b></td><td data-label="Par">4</td><td data-label="± Par" class="dn">-0.192</td><td data-label="Scoring">3.81</td><td data-label="Bird %">26.6%</td><td data-label="Bog+ %">7.1%</td><td data-label="σ">0.56</td></tr><tr><td data-label="Rank">15</td><td data-label="Hole"><b>4</b></td><td data-label="Par">5</td><td data-label="± Par" class="dn">-0.261</td><td data-label="Scoring">4.74</td><td data-label="Bird %">33.4%</td><td data-label="Bog+ %">7.6%</td><td data-label="σ">0.62</td></tr><tr><td data-label="Rank">16</td><td data-label="Hole"><b>14</b></td><td data-label="Par">5</td><td data-label="± Par" class="dn">-0.344</td><td data-label="Scoring">4.66</td><td data-label="Bird %">43.9%</td><td data-label="Bog+ %">9.4%</td><td data-label="σ">0.74</td></tr></tbody>
   </table></div>
   <p class="fine">Holes 7 and 17 excluded from every venue-level rollup: both changed par for 2026, so their pre-reno to-par is measured against a denominator that no longer exists. Their raw scores re-based to par 4 are reported separately as the honest forward-looking read.</p>
+</section></div>
+<div class="tab-panel" id="tab-pins" data-panel="pins">
+<section class="csec" id="s-pins"><div class="sec-head"><h2 class="font-display">Pin Zones &amp; Tendencies <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <p class="lead">Every archived pin position at Detroit, k-means clustered per hole into
+  zones, with how each zone actually played. Zone labels are computed on the approach axis —
+  tee&rarr;green on par 3s, fairway&rarr;green elsewhere — so "back" means back from the
+  player's view, not from an arbitrary map orientation.</p>
+  <div class="caveat"><b>Read this as geography, not as a scoring forecast.</b> The greens were
+  rebuilt to Ross's original contours — raised, expanded and quicker. What survives well is
+  <i>where a pin can be cut</i> and the shape of each green's front/back/side geography, which
+  the restoration largely restored rather than invented. What does not survive is the scoring
+  attached to each zone: those numbers were set on surfaces that no longer exist. A back-left
+  pin being historically the hardest on a hole is a useful prior about the hole's geometry; the
+  exact stroke penalty is not.</div>
+  <h3 class="font-display">Most pin-sensitive holes</h3>
+  <p>Where the pin position swung scoring the most — the holes where Thursday's sheet actually
+  changes the number.</p>
+  <div class="bigstat"><div class="bs"><div class="v">14</div>
+          <div class="l">spread 0.28 strokes<br>
+          easiest front-left · hardest back-left</div></div><div class="bs"><div class="v">9</div>
+          <div class="l">spread 0.23 strokes<br>
+          easiest front-right · hardest mid-left</div></div><div class="bs"><div class="v">8</div>
+          <div class="l">spread 0.22 strokes<br>
+          easiest front-right · hardest back-mid-right</div></div><div class="bs"><div class="v">6</div>
+          <div class="l">spread 0.22 strokes<br>
+          easiest front-left · hardest mid-right</div></div><div class="bs"><div class="v">1</div>
+          <div class="l">spread 0.17 strokes<br>
+          easiest front-left · hardest back-right</div></div></div>
+  <div class="t-wrap"><table class="rs-tbl stickyrc">
+    <thead><tr><th>Hole</th><th>Zones</th><th>Pins</th><th>Easiest zone</th>
+      <th>Hardest zone</th><th>Spread</th><th>Zone map</th></tr></thead>
+    <tbody><tr><td data-label="Hole"><b>1</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-left -0.28</td><td data-label="Hardest" class="up">back-right -0.11</td><td data-label="Spread">0.17</td><td data-label="Zone map"><span class="zonebar"><i style="flex:226;background:rgba(52,211,153,.85)" title="front-left -0.279"></i><i style="flex:852;background:rgba(166,153,129,.85)" title="front-right -0.181"></i><i style="flex:1325;background:rgba(214,129,119,.85)" title="back-left -0.140"></i><i style="flex:846;background:rgba(248,113,113,.85)" title="back-right -0.111"></i></span></td></tr><tr><td data-label="Hole"><b>2</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-left -0.04</td><td data-label="Hardest" class="up">back-right +0.07</td><td data-label="Spread">0.11</td><td data-label="Zone map"><span class="zonebar"><i style="flex:921;background:rgba(52,211,153,.85)" title="front-left -0.041"></i><i style="flex:702;background:rgba(59,207,151,.85)" title="back-left -0.037"></i><i style="flex:699;background:rgba(64,204,150,.85)" title="front-right -0.034"></i><i style="flex:927;background:rgba(248,113,113,.85)" title="back-right +0.066"></i></span></td></tr><tr><td data-label="Hole"><b>3</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">mid-left -0.28</td><td data-label="Hardest" class="up">back-left -0.13</td><td data-label="Spread">0.14</td><td data-label="Zone map"><span class="zonebar"><i style="flex:776;background:rgba(52,211,153,.85)" title="mid-left -0.276"></i><i style="flex:779;background:rgba(137,168,135,.85)" title="front-right -0.213"></i><i style="flex:765;background:rgba(211,131,120,.85)" title="back-right -0.159"></i><i style="flex:929;background:rgba(248,113,113,.85)" title="back-left -0.132"></i></span></td></tr><tr><td data-label="Hole"><b>4</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right -0.31</td><td data-label="Hardest" class="up">back-left -0.19</td><td data-label="Spread">0.12</td><td data-label="Zone map"><span class="zonebar"><i style="flex:714;background:rgba(52,211,153,.85)" title="front-right -0.312"></i><i style="flex:678;background:rgba(78,197,147,.85)" title="front-left -0.296"></i><i style="flex:839;background:rgba(115,179,140,.85)" title="back-right -0.273"></i><i style="flex:1018;background:rgba(248,113,113,.85)" title="back-left -0.192"></i></span></td></tr><tr><td data-label="Hole"><b>5</b></td><td data-label="Zones">6</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">mid-right -0.14</td><td data-label="Hardest" class="up">back-left +0.01</td><td data-label="Spread">0.15</td><td data-label="Zone map"><span class="zonebar"><i style="flex:921;background:rgba(52,211,153,.85)" title="mid-right -0.143"></i><i style="flex:388;background:rgba(63,205,150,.85)" title="mid-left -0.134"></i><i style="flex:625;background:rgba(125,174,138,.85)" title="front-left -0.086"></i><i style="flex:473;background:rgba(155,159,131,.85)" title="back-mid-left -0.063"></i><i style="flex:611;background:rgba(169,152,129,.85)" title="front-right -0.052"></i><i style="flex:231;background:rgba(248,113,113,.85)" title="back-left +0.009"></i></span></td></tr><tr><td data-label="Hole"><b>6</b></td><td data-label="Zones">5</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-left -0.02</td><td data-label="Hardest" class="up">mid-right +0.20</td><td data-label="Spread">0.22</td><td data-label="Zone map"><span class="zonebar"><i style="flex:696;background:rgba(52,211,153,.85)" title="front-left -0.019"></i><i style="flex:773;background:rgba(183,145,126,.85)" title="front-right +0.127"></i><i style="flex:847;background:rgba(211,131,120,.85)" title="back-left +0.158"></i><i style="flex:536;background:rgba(221,126,118,.85)" title="mid-left +0.170"></i><i style="flex:396;background:rgba(248,113,113,.85)" title="mid-right +0.199"></i></span></td></tr><tr><td data-label="Hole"><b>7</b></td><td data-label="Zones">5</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">mid-right -0.54</td><td data-label="Hardest" class="up">back-left -0.40</td><td data-label="Spread">0.15</td><td data-label="Zone map"><span class="zonebar"><i style="flex:70;background:rgba(52,211,153,.85)" title="mid-right -0.543"></i><i style="flex:939;background:rgba(94,189,144,.85)" title="back-right -0.511"></i><i style="flex:864;background:rgba(131,171,136,.85)" title="front-left -0.484"></i><i style="flex:688;background:rgba(168,152,129,.85)" title="front-right -0.456"></i><i style="flex:687;background:rgba(248,113,113,.85)" title="back-left -0.397"></i></span></td></tr><tr><td data-label="Hole"><b>8</b></td><td data-label="Zones">5</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right -0.24</td><td data-label="Hardest" class="up">back-mid-right -0.02</td><td data-label="Spread">0.22</td><td data-label="Zone map"><span class="zonebar"><i style="flex:847;background:rgba(52,211,153,.85)" title="front-right -0.240"></i><i style="flex:156;background:rgba(220,126,118,.85)" title="front-left -0.051"></i><i style="flex:688;background:rgba(233,120,115,.85)" title="back-right -0.036"></i><i style="flex:853;background:rgba(240,116,114,.85)" title="mid-left -0.028"></i><i style="flex:704;background:rgba(248,113,113,.85)" title="back-mid-right -0.020"></i></span></td></tr><tr><td data-label="Hole"><b>9</b></td><td data-label="Zones">6</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right -0.07</td><td data-label="Hardest" class="up">mid-left +0.16</td><td data-label="Spread">0.23</td><td data-label="Zone map"><span class="zonebar"><i style="flex:156;background:rgba(52,211,153,.85)" title="front-right -0.071"></i><i style="flex:391;background:rgba(70,201,149,.85)" title="front-mid-right -0.049"></i><i style="flex:465;background:rgba(111,181,140,.85)" title="front-left +0.000"></i><i style="flex:696;background:rgba(185,144,125,.85)" title="back-right +0.089"></i><i style="flex:861;background:rgba(224,124,117,.85)" title="mid-right +0.136"></i><i style="flex:678;background:rgba(248,113,113,.85)" title="mid-left +0.164"></i></span></td></tr><tr><td data-label="Hole"><b>10</b></td><td data-label="Zones">3</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right -0.15</td><td data-label="Hardest" class="up">back-left -0.11</td><td data-label="Spread">0.04</td><td data-label="Zone map"><span class="zonebar"><i style="flex:922;background:rgba(52,211,153,.85)" title="front-right -0.148"></i><i style="flex:704;background:rgba(165,154,129,.85)" title="back-right -0.126"></i><i style="flex:1622;background:rgba(248,113,113,.85)" title="back-left -0.110"></i></span></td></tr><tr><td data-label="Hole"><b>11</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-left +0.09</td><td data-label="Hardest" class="up">back-right +0.22</td><td data-label="Spread">0.13</td><td data-label="Zone map"><span class="zonebar"><i style="flex:1012;background:rgba(52,211,153,.85)" title="front-left +0.093"></i><i style="flex:694;background:rgba(100,186,143,.85)" title="back-left +0.125"></i><i style="flex:781;background:rgba(167,153,129,.85)" title="mid-right +0.169"></i><i style="flex:761;background:rgba(248,113,113,.85)" title="back-right +0.222"></i></span></td></tr><tr><td data-label="Hole"><b>12</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right +0.06</td><td data-label="Hardest" class="up">back-right +0.11</td><td data-label="Spread">0.05</td><td data-label="Zone map"><span class="zonebar"><i style="flex:399;background:rgba(52,211,153,.85)" title="front-right +0.060"></i><i style="flex:852;background:rgba(150,162,133,.85)" title="back-left +0.085"></i><i style="flex:768;background:rgba(185,144,125,.85)" title="front-left +0.094"></i><i style="flex:1229;background:rgba(248,113,113,.85)" title="back-right +0.110"></i></span></td></tr><tr><td data-label="Hole"><b>13</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">mid-left -0.13</td><td data-label="Hardest" class="up">back-right +0.01</td><td data-label="Spread">0.14</td><td data-label="Zone map"><span class="zonebar"><i style="flex:855;background:rgba(52,211,153,.85)" title="mid-left -0.130"></i><i style="flex:924;background:rgba(105,184,142,.85)" title="front-right -0.091"></i><i style="flex:691;background:rgba(122,175,138,.85)" title="back-left -0.078"></i><i style="flex:778;background:rgba(248,113,113,.85)" title="back-right +0.014"></i></span></td></tr><tr><td data-label="Hole"><b>14</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-left -0.43</td><td data-label="Hardest" class="up">back-left -0.16</td><td data-label="Spread">0.28</td><td data-label="Zone map"><span class="zonebar"><i style="flex:766;background:rgba(52,211,153,.85)" title="front-left -0.433"></i><i style="flex:772;background:rgba(56,208,152,.85)" title="front-right -0.427"></i><i style="flex:925;background:rgba(106,183,141,.85)" title="mid-right -0.357"></i><i style="flex:784;background:rgba(248,113,113,.85)" title="back-left -0.158"></i></span></td></tr><tr><td data-label="Hole"><b>15</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right -0.09</td><td data-label="Hardest" class="up">back-right -0.05</td><td data-label="Spread">0.04</td><td data-label="Zone map"><span class="zonebar"><i style="flex:867;background:rgba(52,211,153,.85)" title="front-right -0.088"></i><i style="flex:855;background:rgba(118,177,139,.85)" title="back-left -0.074"></i><i style="flex:759;background:rgba(248,113,113,.85)" title="front-left -0.047"></i><i style="flex:766;background:rgba(248,113,113,.85)" title="back-right -0.047"></i></span></td></tr><tr><td data-label="Hole"><b>16</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right -0.01</td><td data-label="Hardest" class="up">front-left +0.03</td><td data-label="Spread">0.04</td><td data-label="Zone map"><span class="zonebar"><i style="flex:998;background:rgba(52,211,153,.85)" title="front-right -0.006"></i><i style="flex:843;background:rgba(150,162,133,.85)" title="back-left +0.013"></i><i style="flex:698;background:rgba(165,154,129,.85)" title="back-right +0.016"></i><i style="flex:708;background:rgba(248,113,113,.85)" title="front-left +0.032"></i></span></td></tr><tr><td data-label="Hole"><b>17</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">front-right -0.53</td><td data-label="Hardest" class="up">back-right -0.46</td><td data-label="Spread">0.07</td><td data-label="Zone map"><span class="zonebar"><i style="flex:1078;background:rgba(52,211,153,.85)" title="front-right -0.529"></i><i style="flex:918;background:rgba(119,177,139,.85)" title="back-left -0.505"></i><i style="flex:623;background:rgba(150,161,132,.85)" title="mid-left -0.494"></i><i style="flex:628;background:rgba(248,113,113,.85)" title="back-right -0.459"></i></span></td></tr><tr><td data-label="Hole"><b>18</b></td><td data-label="Zones">4</td><td data-label="Pins">28</td><td data-label="Easiest" class="dn">mid-front-left +0.03</td><td data-label="Hardest" class="up">back-right +0.13</td><td data-label="Spread">0.09</td><td data-label="Zone map"><span class="zonebar"><i style="flex:470;background:rgba(52,211,153,.85)" title="mid-front-left +0.034"></i><i style="flex:1085;background:rgba(73,200,148,.85)" title="mid-back-left +0.044"></i><i style="flex:689;background:rgba(179,147,126,.85)" title="front-right +0.094"></i><i style="flex:1003;background:rgba(248,113,113,.85)" title="back-right +0.126"></i></span></td></tr></tbody>
+  </table></div>
+  <p class="fine">Zone labels are computed on the approach axis (tee-&gt;green for par 3s, fairway-&gt;green otherwise), so &quot;back&quot; means back from the player&#x27;s view. PRE-renovation greens. Zone map bars are width-weighted by how many holes
+  were played to each zone, colored easiest (green) to hardest (red) within the hole.</p>
 </section></div>
   <footer class="foot">
     <div class="wordmark">STIMPDECK</div>
