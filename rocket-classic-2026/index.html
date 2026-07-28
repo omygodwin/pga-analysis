@@ -683,7 +683,7 @@ td.l.name{white-space:nowrap}
 .abtrack{position:relative;height:22px;background:rgba(255,255,255,.045);border-radius:4px}
 .abtrack i{position:absolute;left:0;height:8px;border-radius:2px}
 .abtrack i.pre{top:2px;background:rgba(148,163,184,.55)}
-.abtrack i.post{top:12px;background:#34d399;opacity:.85}
+.abtrack i.post{top:12px}
 .abtrack .tk{position:absolute;top:-2px;bottom:-2px;width:2px;background:#e9c25f;
   box-shadow:0 0 5px rgba(233,194,95,.6);border-radius:1px}
 .abkey{display:flex;flex-wrap:wrap;gap:14px;font-size:10.5px;color:#94a3b8;margin:8px 0 10px}
@@ -916,12 +916,14 @@ td.l.name{white-space:nowrap}
   <b>Grey bar</b> = Detroit pre-renovation (64,116 measured approach shots).
   <b>Colored bar</b> = the projected post-restoration mix, run forward from the per-hole
   approach model. <b>Gold tick</b> = the Tour-wide share. On the right: the projected change
-  against pre-renovation, and where the projected share lands against the Tour. Both bars use
-  their legend colour — a bar sitting past the gold tick means Detroit asks for that distance
-  more often than the Tour does.</p>
+  against pre-renovation, and where the projected share lands against the Tour. The projected bar is
+  <b>coloured by its gap to the Tour</b> and saturates with the size of that gap — blue where
+  the restored course asks for a distance more often than the Tour does, rose where it asks
+  less. Colour and tick say the same thing: a bar past the gold tick is blue.</p>
   <div class="abkey">
     <span><i style="background:rgba(148,163,184,.55)"></i>pre-reno (measured)</span>
-    <span><i style="background:#34d399"></i>projected post-reno</span>
+    <span><i style="background:rgba(56,189,248,.85)"></i>projected — <b>more</b> than Tour</span>
+    <span><i style="background:rgba(251,113,133,.85)"></i>projected — <b>less</b> than Tour</span>
     <span><b class="tk"></b>Tour average</span>
   </div>
   <div class="abrow" style="margin-bottom:2px">
@@ -934,8 +936,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:0.00%"
                title="pre-reno 0.0%"></i>
-            <i class="post" style="width:0.90%"
-               title="projected 0.2%"></i>
+            <i class="post" style="width:0.90%;background:rgba(56,189,248,0.31)"
+               title="projected 0.2% · +0.2 vs Tour"></i>
             <span class="tk" style="left:0.00%" title="Tour 0.0%"></span>
           </div>
           <div class="abnums">
@@ -947,8 +949,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:0.00%"
                title="pre-reno 0.0%"></i>
-            <i class="post" style="width:4.76%"
-               title="projected 0.9%"></i>
+            <i class="post" style="width:4.76%;background:rgba(56,189,248,0.42)"
+               title="projected 0.9% · +0.9 vs Tour"></i>
             <span class="tk" style="left:0.00%" title="Tour 0.0%"></span>
           </div>
           <div class="abnums">
@@ -960,8 +962,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:24.42%"
                title="pre-reno 4.6%"></i>
-            <i class="post" style="width:18.97%"
-               title="projected 3.6%"></i>
+            <i class="post" style="width:18.97%;background:rgba(56,189,248,0.38)"
+               title="projected 3.6% · +0.7 vs Tour"></i>
             <span class="tk" style="left:15.43%" title="Tour 2.9%"></span>
           </div>
           <div class="abnums">
@@ -973,8 +975,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:53.38%"
                title="pre-reno 10.1%"></i>
-            <i class="post" style="width:50.42%"
-               title="projected 9.5%"></i>
+            <i class="post" style="width:50.42%;background:rgba(56,189,248,0.90)"
+               title="projected 9.5% · +4.1 vs Tour"></i>
             <span class="tk" style="left:28.59%" title="Tour 5.4%"></span>
           </div>
           <div class="abnums">
@@ -986,8 +988,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:67.18%"
                title="pre-reno 12.7%"></i>
-            <i class="post" style="width:61.05%"
-               title="projected 11.6%"></i>
+            <i class="post" style="width:61.05%;background:rgba(56,189,248,0.42)"
+               title="projected 11.6% · +0.9 vs Tour"></i>
             <span class="tk" style="left:56.24%" title="Tour 10.6%"></span>
           </div>
           <div class="abnums">
@@ -999,8 +1001,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:83.77%"
                title="pre-reno 15.8%"></i>
-            <i class="post" style="width:72.89%"
-               title="projected 13.8%"></i>
+            <i class="post" style="width:72.89%;background:rgba(251,113,133,0.50)"
+               title="projected 13.8% · -1.5 vs Tour"></i>
             <span class="tk" style="left:80.60%" title="Tour 15.2%"></span>
           </div>
           <div class="abnums">
@@ -1012,8 +1014,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:90.96%"
                title="pre-reno 17.2%"></i>
-            <i class="post" style="width:98.52%"
-               title="projected 18.6%"></i>
+            <i class="post" style="width:98.52%;background:rgba(251,113,133,0.32)"
+               title="projected 18.6% · -0.3 vs Tour"></i>
             <span class="tk" style="left:100.00%" title="Tour 18.9%"></span>
           </div>
           <div class="abnums">
@@ -1025,8 +1027,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:47.78%"
                title="pre-reno 9.0%"></i>
-            <i class="post" style="width:80.81%"
-               title="projected 15.3%"></i>
+            <i class="post" style="width:80.81%;background:rgba(251,113,133,0.76)"
+               title="projected 15.3% · -3.2 vs Tour"></i>
             <span class="tk" style="left:97.67%" title="Tour 18.5%"></span>
           </div>
           <div class="abnums">
@@ -1038,8 +1040,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:46.67%"
                title="pre-reno 8.8%"></i>
-            <i class="post" style="width:62.21%"
-               title="projected 11.8%"></i>
+            <i class="post" style="width:62.21%;background:rgba(56,189,248,0.36)"
+               title="projected 11.8% · +0.5 vs Tour"></i>
             <span class="tk" style="left:59.51%" title="Tour 11.3%"></span>
           </div>
           <div class="abnums">
@@ -1051,8 +1053,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:31.87%"
                title="pre-reno 6.0%"></i>
-            <i class="post" style="width:31.18%"
-               title="projected 5.9%"></i>
+            <i class="post" style="width:31.18%;background:rgba(251,113,133,0.37)"
+               title="projected 5.9% · -0.6 vs Tour"></i>
             <span class="tk" style="left:34.25%" title="Tour 6.5%"></span>
           </div>
           <div class="abnums">
@@ -1064,8 +1066,8 @@ td.l.name{white-space:nowrap}
           <div class="abtrack">
             <i class="pre" style="width:82.61%"
                title="pre-reno 15.6%"></i>
-            <i class="post" style="width:46.88%"
-               title="projected 8.9%"></i>
+            <i class="post" style="width:46.88%;background:rgba(251,113,133,0.55)"
+               title="projected 8.9% · -1.8 vs Tour"></i>
             <span class="tk" style="left:56.24%" title="Tour 10.6%"></span>
           </div>
           <div class="abnums">
