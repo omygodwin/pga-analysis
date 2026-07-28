@@ -1,15 +1,5 @@
 [
   {
-    "event": "ISCO Championship",
-    "short": "ISCO Championship",
-    "course": "Hurstbourne Country Club",
-    "location": "Louisville, Kentucky",
-    "start": "2026-07-09",
-    "end": "2026-07-12",
-    "path": "isco-championship-2026/",
-    "blurb": "Tournament preview: course archetype, weather & draw read, what Hurstbourne rewards, the field, player quotes, and picks."
-  },
-  {
     "event": "the Memorial Tournament",
     "short": "Memorial Tournament",
     "course": "Muirfield Village",
@@ -22,12 +12,22 @@
   {
     "event": "RBC Canadian Open",
     "short": "RBC Canadian Open",
-    "course": "TPC Toronto at Osprey Valley — North",
+    "course": "TPC Toronto at Osprey Valley \u2014 North",
     "location": "Caledon, Ontario",
     "start": "2026-06-11",
     "end": "2026-06-14",
     "path": "rbc-canadian-open-2026/",
     "blurb": "Tournament preview: course archetype, cross-venue fit, the field, pin zones, hole-by-hole."
+  },
+  {
+    "event": "ISCO Championship",
+    "short": "ISCO Championship",
+    "course": "Hurstbourne Country Club",
+    "location": "Louisville, Kentucky",
+    "start": "2026-07-09",
+    "end": "2026-07-12",
+    "path": "isco-championship-2026/",
+    "blurb": "Tournament preview: course archetype, weather & draw read, what Hurstbourne rewards, the field, player quotes, and picks."
   },
   {
     "event": "3M Open",
@@ -37,6 +37,16 @@
     "start": "2026-07-23",
     "end": "2026-07-26",
     "path": "3m-open-2026/",
-    "blurb": "Preview + R2 recap / R3 preview: Michael Kim shoots 59 to lead at −14, the 36-hole strokes-gained leaderboard, how Friday's wind split the draw, the −3 cut in seven years of context, Saturday's pin sheet and hole-by-hole projections, who should hold vs fade, and player quotes."
+    "blurb": "Preview + R2 recap / R3 preview: Michael Kim shoots 59 to lead at \u221214, the 36-hole strokes-gained leaderboard, how Friday's wind split the draw, the \u22123 cut in seven years of context, Saturday's pin sheet and hole-by-hole projections, who should hold vs fade, and player quotes."
+  },
+  {
+    "event": "Rocket Classic",
+    "short": "Rocket Classic",
+    "course": "Detroit Golf Club",
+    "location": "Detroit, Michigan",
+    "start": "2026-07-30",
+    "end": "2026-08-02",
+    "path": "rocket-classic-2026/",
+    "blurb": "Tournament preview: the $16.1M Donald Ross restoration (par 72 to 70), hole-by-hole on what survives the rebuild, modelled approach bins, comparable courses, DataGolf skill and venue fit."
   }
 ]
