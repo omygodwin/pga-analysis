@@ -617,6 +617,37 @@ td.l.name{white-space:nowrap}
 .pzlegend{display:flex;flex-wrap:wrap;gap:12px;font-size:10.5px;color:#94a3b8;margin:6px 0 2px}
 .pzlegend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}
 @media print{.pcard{background:#fafafa;border-color:#ddd}.pzt td{color:#222}}
+
+/* --- archetype / cross-venue charts ------------------------------- */
+.dstrip{position:relative;height:17px;border-radius:9px;margin:3px 0 2px;
+  background:linear-gradient(90deg,rgba(148,163,184,.16),rgba(148,163,184,.30))}
+.dstrip .dot{position:absolute;top:50%;width:5px;height:5px;border-radius:50%;
+  background:rgba(255,255,255,.55);transform:translate(-50%,-50%)}
+.dstrip .mean{position:absolute;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.55)}
+.dstrip .me{position:absolute;top:50%;width:11px;height:11px;background:#e9c25f;
+  transform:translate(-50%,-50%) rotate(45deg);border-radius:2px;
+  box-shadow:0 0 7px rgba(233,194,95,.75)}
+.dsrow{margin:11px 0 14px}
+.dshead{display:flex;align-items:baseline;gap:8px;font-size:11px;margin-bottom:1px}
+.dshead b{font-size:11.5px;letter-spacing:.04em}
+.dshead .rk{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#cbd5e1}
+.dsends{display:flex;justify-content:space-between;font-size:9.5px;color:#64748b}
+.dvbar{display:flex;height:19px;border-radius:4px;overflow:hidden;position:relative;
+  background:rgba(255,255,255,.04)}
+.dvbar i{display:block;height:100%;position:relative}
+.dvbar span{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,.35);z-index:2}
+.dvlab{font-size:9px;font-weight:700;color:#0a1322;line-height:19px;padding:0 4px;
+  white-space:nowrap;overflow:hidden}
+.dvrow{display:grid;grid-template-columns:74px 1fr;gap:8px;align-items:center;margin:3px 0}
+.dvrow .yr{font-size:10.5px;color:#cbd5e1;text-align:right}
+.dvrow .yr i{display:block;font-size:8.5px;color:#64748b;font-style:normal}
+.binrow{display:grid;grid-template-columns:62px 1fr 62px;gap:8px;align-items:center;margin:3px 0}
+.binrow .bl{font-size:10.5px;color:#e2e8f0;text-align:right;font-family:'IBM Plex Mono',monospace}
+.bintrack{position:relative;height:16px;background:rgba(255,255,255,.05);border-radius:4px}
+.bintrack .tk{position:absolute;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.30)}
+.bintrack i{position:absolute;top:0;height:100%;border-radius:3px}
+.bindelta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;text-align:right}
+@media print{.dstrip{background:#eee}.dstrip .dot{background:#999}}
 @media print{.badge{border:1px solid #999;color:#000!important;background:#eee!important}
   .caveat{background:#f6f6f6;color:#000;border-color:#bbb}
   .renocard,.bigstat .bs{background:#fafafa;border-color:#ddd}
@@ -714,7 +745,7 @@ td.l.name{white-space:nowrap}
   <p class="lead">Sat is the toughest test of the week,
   Fri the calmest — each day placed against Detroit Golf
   Club's own historical Toll baseline.</p>
-  <div class="tollmarks" style="height:45px"><b style="left:33.75%;bottom:13px" title="R1 Thu — Toll 10.8">Thu<i style="height:17px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b><b style="left:25.94%;bottom:0px" title="R2 Fri — Toll 8.3">Fri<i style="height:4px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b><b style="left:35.31%;bottom:26px" title="R3 Sat — Toll 11.3">Sat<i style="height:30px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b><b style="left:35.00%;bottom:0px" title="R4 Sun — Toll 11.2">Sun<i style="height:4px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b></div>
+  <div class="tollmarks" style="height:45px"><b style="left:34.38%;bottom:26px" title="R1 Thu — Toll 11.0">Thu<i style="height:30px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b><b style="left:27.19%;bottom:0px" title="R2 Fri — Toll 8.7">Fri<i style="height:4px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b><b style="left:36.25%;bottom:0px" title="R3 Sat — Toll 11.6">Sat<i style="height:4px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b><b style="left:32.81%;bottom:13px" title="R4 Sun — Toll 10.5">Sun<i style="height:17px;position:absolute;left:50%;top:100%;width:1px;background:rgba(233,194,95,.55)"></i></b></div>
   <div class="tollspec"><i style="width:29.69%;background:rgba(16,185,129,.75)"></i><i style="width:24.22%;background:rgba(132,204,22,.75)"></i><i style="width:21.09%;background:rgba(148,163,184,.75)"></i><i style="width:24.22%;background:rgba(249,115,22,.75)"></i><i style="width:0.78%;background:rgba(239,68,68,.75)"></i></div>
   <div class="tollticks"><span style="left:41.56%">median 13.3</span><span style="left:64.69%">p90 20.7</span><span style="left:76.56%">max 24.5</span></div>
   <p class="fine">Gold markers = forecast play-window Toll per day · bands = canonical Toll
@@ -722,31 +753,31 @@ td.l.name{white-space:nowrap}
   own 84-day archive median / p90 / max.</p>
   <div class="wxgrid"><div class="wxday">
           <div class="d">R1 · Thu 07-30</div>
-          <div class="tl" style="color:rgb(132,204,22)">10.8</div>
+          <div class="tl" style="color:rgb(132,204,22)">11.0</div>
           <div class="bk" style="background:rgba(132,204,22,.18);color:rgb(132,204,22)">MILD</div>
-          <div class="met">88° / 62°<br>
+          <div class="met">87° / 62°<br>
             Wind 8–10 mph · gust 14<br>
             Rain 0.00″ · 0% chance</div>
         </div><div class="wxday">
           <div class="d">R2 · Fri 07-31</div>
-          <div class="tl" style="color:rgb(16,185,129)">8.3</div>
+          <div class="tl" style="color:rgb(16,185,129)">8.7</div>
           <div class="bk" style="background:rgba(16,185,129,.18);color:rgb(16,185,129)">CALM</div>
-          <div class="met">92° / 70°<br>
-            Wind 6–13 mph · gust 15<br>
-            Rain 0.00″ · 9% chance</div>
+          <div class="met">89° / 71°<br>
+            Wind 7–10 mph · gust 15<br>
+            Rain 0.01″ · 9% chance</div>
         </div><div class="wxday">
           <div class="d">R3 · Sat 08-01</div>
-          <div class="tl" style="color:rgb(132,204,22)">11.3</div>
+          <div class="tl" style="color:rgb(132,204,22)">11.6</div>
           <div class="bk" style="background:rgba(132,204,22,.18);color:rgb(132,204,22)">MILD</div>
-          <div class="met">76° / 67°<br>
-            Wind 7–8 mph · gust 19<br>
-            Rain 0.06″ · 21% chance</div>
+          <div class="met">72° / 67°<br>
+            Wind 7–10 mph · gust 19<br>
+            Rain 0.05″ · 21% chance</div>
         </div><div class="wxday">
           <div class="d">R4 · Sun 08-02</div>
-          <div class="tl" style="color:rgb(132,204,22)">11.2</div>
+          <div class="tl" style="color:rgb(132,204,22)">10.5</div>
           <div class="bk" style="background:rgba(132,204,22,.18);color:rgb(132,204,22)">MILD</div>
-          <div class="met">80° / 65°<br>
-            Wind 10–13 mph · gust 15<br>
+          <div class="met">81° / 66°<br>
+            Wind 9–10 mph · gust 15<br>
             Rain 0.00″ · 22% chance</div>
         </div></div>
   <p>The week averages 10.4 against a venue median of 13.3 — conditions sit <b>below</b> Detroit's own norm, so the weather is not going to defend the golf course.</p>
@@ -795,6 +826,124 @@ td.l.name{white-space:nowrap}
   attack the same thing: how easy it was to hit greens and make birdies. Expect GIR and
   fairway rates to fall and the separation numbers to rise. Treat this chart as the
   <i>baseline being moved away from</i>, not a forecast.</div>
+</section>
+
+<section class="csec" id="s-arch"><div class="sec-head"><h2 class="font-display">Course Archetype — What Drives Scoring Here <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <div class="csec-summary">Neutral · APP-driven —
+    28 rounds over 7 years.</div>
+  <div class="bigstat">
+    <div class="bs"><div class="v" style="font-size:19px">Neutral · APP-driven</div>
+      <div class="l">archetype vs Tour</div></div>
+    <div class="bs"><div class="v">-0.102</div><div class="l">avg per hole</div></div>
+    <div class="bs"><div class="v">23%</div><div class="l">birdie rate</div></div>
+    <div class="bs"><div class="v">13%</div><div class="l">bogey+ rate</div></div>
+  </div>
+
+  <h3 class="font-display">What drives scoring variance — vs Tour</h3>
+  <p class="fine" style="margin-top:2px">Each skill's share of scoring variance <b>minus</b> the
+  Tour-wide share. Left of centre = matters less here than at a typical stop, right = more. A
+  raw share would read "putting ~36%" everywhere and tell you nothing.</p>
+  <div style="margin:9px 0 4px"><span style="display:inline-flex;align-items:center;gap:4px;margin-right:11px"><i style="width:9px;height:9px;border-radius:2px;display:inline-block;background:#38bdf8"></i>OTT</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:11px"><i style="width:9px;height:9px;border-radius:2px;display:inline-block;background:#e9c25f"></i>APP</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:11px"><i style="width:9px;height:9px;border-radius:2px;display:inline-block;background:#a78bfa"></i>ARG</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:11px"><i style="width:9px;height:9px;border-radius:2px;display:inline-block;background:#34d399"></i>PUTT</span></div>
+  <div class="dvrow"><div class="yr">Venue avg<i>58,463 holes</i></div><div class="dvbar"><i style="width:29.58%"></i><i style="width:12.05%;background:#a78bfa"><span class="dvlab">ARG -3</span></i><i style="width:8.37%;background:#38bdf8"></i><span></span><i style="width:24.56%;background:#e9c25f"><span class="dvlab">APP +6</span></i><i style="width:20.52%;background:#34d399"><span class="dvlab">PUTT +5</span></i></div></div><div class="dvrow"><div class="yr">2025<i>0 holes</i></div><div class="dvbar"><i style="width:41.68%"></i><i style="width:4.67%;background:#a78bfa"></i><i style="width:3.65%;background:#34d399"></i><span></span><i style="width:30.70%;background:#e9c25f"><span class="dvlab">APP +7</span></i><i style="width:2.28%;background:#38bdf8"></i></div></div><div class="dvrow"><div class="yr">2024<i>0 holes</i></div><div class="dvbar"><i style="width:23.25%"></i><i style="width:19.89%;background:#a78bfa"><span class="dvlab">ARG -5</span></i><i style="width:6.87%;background:#38bdf8"></i><span></span><i style="width:30.29%;background:#34d399"><span class="dvlab">PUTT +7</span></i><i style="width:21.12%;background:#e9c25f"><span class="dvlab">APP +5</span></i></div></div><div class="dvrow"><div class="yr">2023<i>0 holes</i></div><div class="dvbar"><i style="width:1.95%"></i><i style="width:24.86%;background:#a78bfa"><span class="dvlab">ARG -6</span></i><i style="width:23.18%;background:#38bdf8"><span class="dvlab">OTT -6</span></i><span></span><i style="width:37.10%;background:#e9c25f"><span class="dvlab">APP +9</span></i><i style="width:35.60%;background:#34d399"><span class="dvlab">PUTT +9</span></i></div></div><div class="dvrow"><div class="yr">2022<i>0 holes</i></div><div class="dvbar"><i style="width:42.04%"></i><i style="width:6.75%;background:#a78bfa"></i><i style="width:1.21%;background:#38bdf8"></i><span></span><i style="width:31.33%;background:#e9c25f"><span class="dvlab">APP +8</span></i><i style="width:1.28%;background:#34d399"></i></div></div><div class="dvrow"><div class="yr">2021<i>0 holes</i></div><div class="dvbar"><i style="width:40.19%"></i><i style="width:9.81%;background:#38bdf8"><span class="dvlab">OTT -2</span></i><span></span><i style="width:23.63%;background:#e9c25f"><span class="dvlab">APP +6</span></i><i style="width:10.41%;background:#a78bfa"><span class="dvlab">ARG +2</span></i><i style="width:0.42%;background:#34d399"></i></div></div><div class="dvrow"><div class="yr">2020<i>0 holes</i></div><div class="dvbar"><i style="width:31.13%"></i><i style="width:16.10%;background:#a78bfa"><span class="dvlab">ARG -4</span></i><i style="width:2.77%;background:#38bdf8"></i><span></span><i style="width:41.52%;background:#34d399"><span class="dvlab">PUTT +10</span></i><i style="width:2.00%;background:#e9c25f"></i></div></div><div class="dvrow"><div class="yr">2019<i>0 holes</i></div><div class="dvbar"><i style="width:15.09%"></i><i style="width:19.81%;background:#a78bfa"><span class="dvlab">ARG -5</span></i><i style="width:15.10%;background:#38bdf8"><span class="dvlab">OTT -4</span></i><span></span><i style="width:38.66%;background:#34d399"><span class="dvlab">PUTT +9</span></i><i style="width:20.90%;background:#e9c25f"><span class="dvlab">APP +5</span></i></div></div>
+
+  <h3 class="font-display">How much conditions drive scoring — vs Tour</h3>
+  <div class="dsrow"><div class="dshead"><b style="color:#fb923c">Conditions (Toll) · share of variance</b><span class="rk">#22 of 38 · -0.4σ</span></div><div class="dstrip"><span class="dot" style="left:0.00%"></span><span class="dot" style="left:1.78%"></span><span class="dot" style="left:2.18%"></span><span class="dot" style="left:2.80%"></span><span class="dot" style="left:4.40%"></span><span class="dot" style="left:5.11%"></span><span class="dot" style="left:5.86%"></span><span class="dot" style="left:7.05%"></span><span class="dot" style="left:7.36%"></span><span class="dot" style="left:8.35%"></span><span class="dot" style="left:11.72%"></span><span class="dot" style="left:12.99%"></span><span class="dot" style="left:13.08%"></span><span class="dot" style="left:14.01%"></span><span class="dot" style="left:14.78%"></span><span class="dot" style="left:15.90%"></span><span class="dot" style="left:17.74%"></span><span class="dot" style="left:21.48%"></span><span class="dot" style="left:22.75%"></span><span class="dot" style="left:24.46%"></span><span class="dot" style="left:26.24%"></span><span class="dot" style="left:27.12%"></span><span class="dot" style="left:27.78%"></span><span class="dot" style="left:29.42%"></span><span class="dot" style="left:29.63%"></span><span class="dot" style="left:29.75%"></span><span class="dot" style="left:36.85%"></span><span class="dot" style="left:38.03%"></span><span class="dot" style="left:38.53%"></span><span class="dot" style="left:42.10%"></span><span class="dot" style="left:46.05%"></span><span class="dot" style="left:46.21%"></span><span class="dot" style="left:49.64%"></span><span class="dot" style="left:56.63%"></span><span class="dot" style="left:57.54%"></span><span class="dot" style="left:72.94%"></span><span class="dot" style="left:100.00%"></span><span class="mean" style="left:26.17%"></span><span class="me" style="left:16.71%"></span></div><div class="dsends"><span>matters less here</span><span>matters more here</span></div></div><div class="dsrow"><div class="dshead"><b style="color:#38bdf8">Wind · share of variance</b><span class="rk">#31 of 38 · -0.9σ</span></div><div class="dstrip"><span class="dot" style="left:0.00%"></span><span class="dot" style="left:2.28%"></span><span class="dot" style="left:3.18%"></span><span class="dot" style="left:4.06%"></span><span class="dot" style="left:6.44%"></span><span class="dot" style="left:6.44%"></span><span class="dot" style="left:7.22%"></span><span class="dot" style="left:9.43%"></span><span class="dot" style="left:10.46%"></span><span class="dot" style="left:10.66%"></span><span class="dot" style="left:11.03%"></span><span class="dot" style="left:11.87%"></span><span class="dot" style="left:12.15%"></span><span class="dot" style="left:12.33%"></span><span class="dot" style="left:18.99%"></span><span class="dot" style="left:19.77%"></span><span class="dot" style="left:19.96%"></span><span class="dot" style="left:25.77%"></span><span class="dot" style="left:26.29%"></span><span class="dot" style="left:26.45%"></span><span class="dot" style="left:26.75%"></span><span class="dot" style="left:27.81%"></span><span class="dot" style="left:29.60%"></span><span class="dot" style="left:33.91%"></span><span class="dot" style="left:34.59%"></span><span class="dot" style="left:38.65%"></span><span class="dot" style="left:39.50%"></span><span class="dot" style="left:42.77%"></span><span class="dot" style="left:43.74%"></span><span class="dot" style="left:44.14%"></span><span class="dot" style="left:46.09%"></span><span class="dot" style="left:47.43%"></span><span class="dot" style="left:54.63%"></span><span class="dot" style="left:63.18%"></span><span class="dot" style="left:80.28%"></span><span class="dot" style="left:88.75%"></span><span class="dot" style="left:100.00%"></span><span class="mean" style="left:29.37%"></span><span class="me" style="left:7.49%"></span></div><div class="dsends"><span>matters less here</span><span>matters more here</span></div></div>
+  <p class="fine">Each dot is one archived venue; the tick is the Tour mean and the gold
+  diamond is Detroit.</p>
+</section>
+
+<section class="csec" id="s-ranks"><div class="sec-head"><h2 class="font-display">Where This Ranks Across the Tour <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <div class="csec-summary">Detroit placed against every other archived venue on what
+  separates the field, how it tilts between accuracy and length, and its approach mix.</div>
+  <p class="lead">Each dot is one archived venue, the tick is the Tour mean and the gold
+  diamond is Detroit. Correlations are shown by how strongly a skill <b>separated the field</b>,
+  not by raw level — a strong-looking correlation that every venue shares carries no signal.</p>
+  <div class="dsrow"><div class="dshead"><b style="color:#38bdf8">OTT</b><span class="rk">#23 of 38 · -0.4σ</span></div><div class="dstrip"><span class="dot" style="left:100.00%"></span><span class="dot" style="left:86.66%"></span><span class="dot" style="left:80.62%"></span><span class="dot" style="left:79.37%"></span><span class="dot" style="left:77.00%"></span><span class="dot" style="left:76.43%"></span><span class="dot" style="left:76.13%"></span><span class="dot" style="left:73.18%"></span><span class="dot" style="left:72.60%"></span><span class="dot" style="left:72.54%"></span><span class="dot" style="left:69.42%"></span><span class="dot" style="left:69.02%"></span><span class="dot" style="left:68.33%"></span><span class="dot" style="left:67.61%"></span><span class="dot" style="left:65.92%"></span><span class="dot" style="left:65.40%"></span><span class="dot" style="left:65.29%"></span><span class="dot" style="left:65.17%"></span><span class="dot" style="left:57.52%"></span><span class="dot" style="left:55.65%"></span><span class="dot" style="left:53.99%"></span><span class="dot" style="left:52.74%"></span><span class="dot" style="left:49.70%"></span><span class="dot" style="left:49.57%"></span><span class="dot" style="left:49.46%"></span><span class="dot" style="left:49.02%"></span><span class="dot" style="left:48.65%"></span><span class="dot" style="left:48.27%"></span><span class="dot" style="left:46.31%"></span><span class="dot" style="left:45.85%"></span><span class="dot" style="left:44.45%"></span><span class="dot" style="left:44.07%"></span><span class="dot" style="left:37.60%"></span><span class="dot" style="left:31.06%"></span><span class="dot" style="left:29.45%"></span><span class="dot" style="left:22.68%"></span><span class="dot" style="left:0.00%"></span><span class="mean" style="left:58.02%"></span><span class="me" style="left:50.45%"></span></div><div class="dsends"><span>separates field less</span><span>separates field more</span></div></div><div class="dsrow"><div class="dshead"><b style="color:#e9c25f">APP</b><span class="rk">#11 of 38 · +0.6σ</span></div><div class="dstrip"><span class="dot" style="left:100.00%"></span><span class="dot" style="left:98.94%"></span><span class="dot" style="left:94.33%"></span><span class="dot" style="left:93.22%"></span><span class="dot" style="left:92.11%"></span><span class="dot" style="left:91.95%"></span><span class="dot" style="left:91.47%"></span><span class="dot" style="left:90.54%"></span><span class="dot" style="left:90.10%"></span><span class="dot" style="left:89.32%"></span><span class="dot" style="left:86.02%"></span><span class="dot" style="left:85.89%"></span><span class="dot" style="left:85.60%"></span><span class="dot" style="left:85.12%"></span><span class="dot" style="left:85.11%"></span><span class="dot" style="left:83.67%"></span><span class="dot" style="left:83.07%"></span><span class="dot" style="left:81.21%"></span><span class="dot" style="left:80.00%"></span><span class="dot" style="left:79.40%"></span><span class="dot" style="left:76.95%"></span><span class="dot" style="left:76.80%"></span><span class="dot" style="left:75.98%"></span><span class="dot" style="left:75.42%"></span><span class="dot" style="left:75.24%"></span><span class="dot" style="left:74.00%"></span><span class="dot" style="left:73.67%"></span><span class="dot" style="left:71.00%"></span><span class="dot" style="left:70.23%"></span><span class="dot" style="left:65.81%"></span><span class="dot" style="left:63.52%"></span><span class="dot" style="left:62.87%"></span><span class="dot" style="left:60.48%"></span><span class="dot" style="left:52.16%"></span><span class="dot" style="left:38.79%"></span><span class="dot" style="left:32.23%"></span><span class="dot" style="left:0.00%"></span><span class="mean" style="left:76.01%"></span><span class="me" style="left:88.54%"></span></div><div class="dsends"><span>separates field less</span><span>separates field more</span></div></div><div class="dsrow"><div class="dshead"><b style="color:#a78bfa">ARG</b><span class="rk">#27 of 38 · -0.4σ</span></div><div class="dstrip"><span class="dot" style="left:100.00%"></span><span class="dot" style="left:92.31%"></span><span class="dot" style="left:74.81%"></span><span class="dot" style="left:71.76%"></span><span class="dot" style="left:68.71%"></span><span class="dot" style="left:67.97%"></span><span class="dot" style="left:67.85%"></span><span class="dot" style="left:65.47%"></span><span class="dot" style="left:64.94%"></span><span class="dot" style="left:63.58%"></span><span class="dot" style="left:61.80%"></span><span class="dot" style="left:60.86%"></span><span class="dot" style="left:59.22%"></span><span class="dot" style="left:59.14%"></span><span class="dot" style="left:59.00%"></span><span class="dot" style="left:58.64%"></span><span class="dot" style="left:56.05%"></span><span class="dot" style="left:52.90%"></span><span class="dot" style="left:51.49%"></span><span class="dot" style="left:49.79%"></span><span class="dot" style="left:45.76%"></span><span class="dot" style="left:43.49%"></span><span class="dot" style="left:43.21%"></span><span class="dot" style="left:39.66%"></span><span class="dot" style="left:38.97%"></span><span class="dot" style="left:37.82%"></span><span class="dot" style="left:34.58%"></span><span class="dot" style="left:31.90%"></span><span class="dot" style="left:31.22%"></span><span class="dot" style="left:26.47%"></span><span class="dot" style="left:24.14%"></span><span class="dot" style="left:19.10%"></span><span class="dot" style="left:11.27%"></span><span class="dot" style="left:9.06%"></span><span class="dot" style="left:4.84%"></span><span class="dot" style="left:1.50%"></span><span class="dot" style="left:0.00%"></span><span class="mean" style="left:47.28%"></span><span class="me" style="left:36.96%"></span></div><div class="dsends"><span>separates field less</span><span>separates field more</span></div></div><div class="dsrow"><div class="dshead"><b style="color:#34d399">PUTT</b><span class="rk">#7 of 38 · +0.6σ</span></div><div class="dstrip"><span class="dot" style="left:100.00%"></span><span class="dot" style="left:98.45%"></span><span class="dot" style="left:97.80%"></span><span class="dot" style="left:89.66%"></span><span class="dot" style="left:87.03%"></span><span class="dot" style="left:82.88%"></span><span class="dot" style="left:76.17%"></span><span class="dot" style="left:75.60%"></span><span class="dot" style="left:75.19%"></span><span class="dot" style="left:73.74%"></span><span class="dot" style="left:73.33%"></span><span class="dot" style="left:72.50%"></span><span class="dot" style="left:72.30%"></span><span class="dot" style="left:72.28%"></span><span class="dot" style="left:72.04%"></span><span class="dot" style="left:71.87%"></span><span class="dot" style="left:71.56%"></span><span class="dot" style="left:71.14%"></span><span class="dot" style="left:70.77%"></span><span class="dot" style="left:69.57%"></span><span class="dot" style="left:68.46%"></span><span class="dot" style="left:66.94%"></span><span class="dot" style="left:66.62%"></span><span class="dot" style="left:66.03%"></span><span class="dot" style="left:65.90%"></span><span class="dot" style="left:65.13%"></span><span class="dot" style="left:60.24%"></span><span class="dot" style="left:60.17%"></span><span class="dot" style="left:59.12%"></span><span class="dot" style="left:55.86%"></span><span class="dot" style="left:53.56%"></span><span class="dot" style="left:53.06%"></span><span class="dot" style="left:45.34%"></span><span class="dot" style="left:43.94%"></span><span class="dot" style="left:39.52%"></span><span class="dot" style="left:27.77%"></span><span class="dot" style="left:0.00%"></span><span class="mean" style="left:66.80%"></span><span class="me" style="left:78.35%"></span></div><div class="dsends"><span>separates field less</span><span>separates field more</span></div></div>
+  <div class="dsrow"><div class="dshead"><b style="color:#fb923c">Accuracy ↔ Bombers</b><span class="rk"> · -0.0σ</span></div><div class="dstrip"><span class="dot" style="left:0.00%"></span><span class="dot" style="left:4.80%"></span><span class="dot" style="left:6.38%"></span><span class="dot" style="left:6.70%"></span><span class="dot" style="left:13.34%"></span><span class="dot" style="left:15.50%"></span><span class="dot" style="left:16.16%"></span><span class="dot" style="left:18.23%"></span><span class="dot" style="left:23.52%"></span><span class="dot" style="left:24.05%"></span><span class="dot" style="left:24.18%"></span><span class="dot" style="left:24.69%"></span><span class="dot" style="left:27.60%"></span><span class="dot" style="left:27.80%"></span><span class="dot" style="left:28.98%"></span><span class="dot" style="left:29.14%"></span><span class="dot" style="left:33.90%"></span><span class="dot" style="left:36.96%"></span><span class="dot" style="left:37.33%"></span><span class="dot" style="left:37.84%"></span><span class="dot" style="left:40.94%"></span><span class="dot" style="left:44.75%"></span><span class="dot" style="left:45.90%"></span><span class="dot" style="left:47.56%"></span><span class="dot" style="left:55.45%"></span><span class="dot" style="left:61.79%"></span><span class="dot" style="left:62.07%"></span><span class="dot" style="left:62.84%"></span><span class="dot" style="left:66.51%"></span><span class="dot" style="left:74.78%"></span><span class="dot" style="left:75.13%"></span><span class="dot" style="left:81.01%"></span><span class="dot" style="left:84.25%"></span><span class="dot" style="left:84.32%"></span><span class="dot" style="left:92.38%"></span><span class="dot" style="left:96.00%"></span><span class="dot" style="left:100.00%"></span><span class="mean" style="left:43.59%"></span><span class="me" style="left:43.34%"></span></div><div class="dsends"><span>accuracy</span><span>bombers</span></div></div>
+  <h3 class="font-display">Approach mix</h3>
+  <div class="dsrow"><div class="dshead"><b style="color:#34d399">Wedge &lt;125 · 30%</b><span class="rk">#4 of 38 · +1.8σ</span></div><div class="dstrip"><span class="dot" style="left:0.00%"></span><span class="dot" style="left:7.28%"></span><span class="dot" style="left:12.27%"></span><span class="dot" style="left:17.78%"></span><span class="dot" style="left:19.33%"></span><span class="dot" style="left:19.77%"></span><span class="dot" style="left:21.18%"></span><span class="dot" style="left:22.24%"></span><span class="dot" style="left:26.30%"></span><span class="dot" style="left:28.42%"></span><span class="dot" style="left:29.74%"></span><span class="dot" style="left:29.92%"></span><span class="dot" style="left:31.16%"></span><span class="dot" style="left:35.88%"></span><span class="dot" style="left:36.50%"></span><span class="dot" style="left:37.29%"></span><span class="dot" style="left:37.73%"></span><span class="dot" style="left:37.86%"></span><span class="dot" style="left:37.86%"></span><span class="dot" style="left:38.35%"></span><span class="dot" style="left:41.92%"></span><span class="dot" style="left:42.89%"></span><span class="dot" style="left:42.89%"></span><span class="dot" style="left:46.82%"></span><span class="dot" style="left:48.37%"></span><span class="dot" style="left:49.21%"></span><span class="dot" style="left:49.21%"></span><span class="dot" style="left:53.27%"></span><span class="dot" style="left:54.19%"></span><span class="dot" style="left:54.37%"></span><span class="dot" style="left:61.96%"></span><span class="dot" style="left:69.99%"></span><span class="dot" style="left:72.29%"></span><span class="dot" style="left:77.14%"></span><span class="dot" style="left:83.94%"></span><span class="dot" style="left:84.51%"></span><span class="dot" style="left:100.00%"></span><span class="mean" style="left:42.16%"></span><span class="me" style="left:82.83%"></span></div><div class="dsends"><span>fewer here</span><span>more here</span></div></div><div class="dsrow"><div class="dshead"><b style="color:#e9c25f">Mid 125–200 · 46%</b><span class="rk">#36 of 38 · -1.5σ</span></div><div class="dstrip"><span class="dot" style="left:0.00%"></span><span class="dot" style="left:9.26%"></span><span class="dot" style="left:14.94%"></span><span class="dot" style="left:16.43%"></span><span class="dot" style="left:19.52%"></span><span class="dot" style="left:21.82%"></span><span class="dot" style="left:25.04%"></span><span class="dot" style="left:26.41%"></span><span class="dot" style="left:30.11%"></span><span class="dot" style="left:30.23%"></span><span class="dot" style="left:32.77%"></span><span class="dot" style="left:37.00%"></span><span class="dot" style="left:37.16%"></span><span class="dot" style="left:41.10%"></span><span class="dot" style="left:42.35%"></span><span class="dot" style="left:42.43%"></span><span class="dot" style="left:43.96%"></span><span class="dot" style="left:44.57%"></span><span class="dot" style="left:49.28%"></span><span class="dot" style="left:49.28%"></span><span class="dot" style="left:54.03%"></span><span class="dot" style="left:54.11%"></span><span class="dot" style="left:54.23%"></span><span class="dot" style="left:56.28%"></span><span class="dot" style="left:57.93%"></span><span class="dot" style="left:60.59%"></span><span class="dot" style="left:64.81%"></span><span class="dot" style="left:65.50%"></span><span class="dot" style="left:67.55%"></span><span class="dot" style="left:69.28%"></span><span class="dot" style="left:76.73%"></span><span class="dot" style="left:78.38%"></span><span class="dot" style="left:78.86%"></span><span class="dot" style="left:84.22%"></span><span class="dot" style="left:90.70%"></span><span class="dot" style="left:92.43%"></span><span class="dot" style="left:100.00%"></span><span class="mean" style="left:49.17%"></span><span class="me" style="left:12.12%"></span></div><div class="dsends"><span>fewer here</span><span>more here</span></div></div><div class="dsrow"><div class="dshead"><b style="color:#f87171">Long 200+ · 24%</b><span class="rk">#20 of 38 · -0.0σ</span></div><div class="dstrip"><span class="dot" style="left:0.00%"></span><span class="dot" style="left:13.84%"></span><span class="dot" style="left:14.09%"></span><span class="dot" style="left:15.82%"></span><span class="dot" style="left:21.90%"></span><span class="dot" style="left:23.43%"></span><span class="dot" style="left:26.50%"></span><span class="dot" style="left:28.23%"></span><span class="dot" style="left:30.89%"></span><span class="dot" style="left:33.37%"></span><span class="dot" style="left:34.95%"></span><span class="dot" style="left:36.83%"></span><span class="dot" style="left:36.88%"></span><span class="dot" style="left:38.01%"></span><span class="dot" style="left:38.66%"></span><span class="dot" style="left:43.20%"></span><span class="dot" style="left:44.09%"></span><span class="dot" style="left:46.47%"></span><span class="dot" style="left:52.00%"></span><span class="dot" style="left:52.00%"></span><span class="dot" style="left:53.14%"></span><span class="dot" style="left:53.29%"></span><span class="dot" style="left:53.58%"></span><span class="dot" style="left:62.28%"></span><span class="dot" style="left:63.87%"></span><span class="dot" style="left:69.95%"></span><span class="dot" style="left:72.22%"></span><span class="dot" style="left:73.50%"></span><span class="dot" style="left:74.30%"></span><span class="dot" style="left:74.69%"></span><span class="dot" style="left:75.09%"></span><span class="dot" style="left:79.04%"></span><span class="dot" style="left:81.51%"></span><span class="dot" style="left:84.33%"></span><span class="dot" style="left:84.38%"></span><span class="dot" style="left:98.37%"></span><span class="dot" style="left:100.00%"></span><span class="mean" style="left:50.94%"></span><span class="me" style="left:50.87%"></span></div><div class="dsends"><span>fewer here</span><span>more here</span></div></div>
+</section>
+
+<section class="csec" id="s-bins"><div class="sec-head"><h2 class="font-display">Approach Demand — 25-Yard Bins vs Tour <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+  <div class="csec-summary">Which approach distances Detroit actually asks for, in 25-yard
+  bands, against every other archived event.</div>
+  <p class="lead">Bar = Detroit's share of approach shots in that band
+  (64,116 shots). Tick = the Tour-wide share. The number on the right is the
+  gap in percentage points.</p>
+  <div class="binrow">
+          <div class="bl">50-75</div>
+          <div class="bintrack">
+            <i style="width:24.42%;background:#34d399;opacity:.8"></i>
+            <span class="tk" style="left:15.43%"></span>
+          </div>
+          <div class="bindelta" style="color:#34d399">+1.7</div>
+        </div><div class="binrow">
+          <div class="bl">75-100</div>
+          <div class="bintrack">
+            <i style="width:53.38%;background:#34d399;opacity:.8"></i>
+            <span class="tk" style="left:28.59%"></span>
+          </div>
+          <div class="bindelta" style="color:#34d399">+4.7</div>
+        </div><div class="binrow">
+          <div class="bl">100-125</div>
+          <div class="bintrack">
+            <i style="width:67.18%;background:#34d399;opacity:.8"></i>
+            <span class="tk" style="left:56.24%"></span>
+          </div>
+          <div class="bindelta" style="color:#34d399">+2.1</div>
+        </div><div class="binrow">
+          <div class="bl">125-150</div>
+          <div class="bintrack">
+            <i style="width:83.77%;background:#34d399;opacity:.8"></i>
+            <span class="tk" style="left:80.60%"></span>
+          </div>
+          <div class="bindelta" style="color:#34d399">+0.6</div>
+        </div><div class="binrow">
+          <div class="bl">150-175</div>
+          <div class="bintrack">
+            <i style="width:90.96%;background:#f87171;opacity:.8"></i>
+            <span class="tk" style="left:100.00%"></span>
+          </div>
+          <div class="bindelta" style="color:#f87171">-1.7</div>
+        </div><div class="binrow">
+          <div class="bl">175-200</div>
+          <div class="bintrack">
+            <i style="width:47.78%;background:#f87171;opacity:.8"></i>
+            <span class="tk" style="left:97.67%"></span>
+          </div>
+          <div class="bindelta" style="color:#f87171">-9.4</div>
+        </div><div class="binrow">
+          <div class="bl">200-225</div>
+          <div class="bintrack">
+            <i style="width:46.67%;background:#f87171;opacity:.8"></i>
+            <span class="tk" style="left:59.51%"></span>
+          </div>
+          <div class="bindelta" style="color:#f87171">-2.4</div>
+        </div><div class="binrow">
+          <div class="bl">225-250</div>
+          <div class="bintrack">
+            <i style="width:31.87%;background:#f87171;opacity:.8"></i>
+            <span class="tk" style="left:34.25%"></span>
+          </div>
+          <div class="bindelta" style="color:#f87171">-0.5</div>
+        </div><div class="binrow">
+          <div class="bl">250+</div>
+          <div class="bintrack">
+            <i style="width:82.61%;background:#34d399;opacity:.8"></i>
+            <span class="tk" style="left:56.24%"></span>
+          </div>
+          <div class="bindelta" style="color:#34d399">+5.0</div>
+        </div>
+  <p style="margin-top:11px">The profile is <b>bimodal</b>: Detroit over-indexes
+  250+y and 75-100y while under-indexing
+  175-200y and 200-225y. That is a wedge-and-driver golf course,
+  not a mid-iron one — the band a typical Tour stop leans on hardest is the one Detroit asks
+  for least.</p>
+  <div class="caveat"><b>The restoration pushes against this.</b> Converting 7 and 17 to 505-
+  and 537-yard par 4s adds long approaches that barely existed before, and the added length on
+  2, 6 and 13 moves more of the card into the mid-iron band Detroit historically avoided.
+  Expect this distribution to flatten.</div>
+  <p class="fine">Share of all approach shots falling in each 25-yard band, Detroit vs every other archived event. Positive delta = this venue asks for that distance more often than the Tour norm. PRE-renovation.</p>
 </section>
 
 <section class="csec" id="s-comps"><div class="sec-head"><h2 class="font-display">Courses That Played Like Detroit <span class="badge bg-prereno">PRE-RENO</span></h2><svg class="csec-chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
