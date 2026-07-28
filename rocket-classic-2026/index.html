@@ -678,18 +678,19 @@ td.l.name{white-space:nowrap}
 .zsbar i{position:absolute;left:0;top:0;height:100%;border-radius:3px}
 
 /* --- combined approach-demand chart -------------------------------- */
-.abrow{display:grid;grid-template-columns:64px 1fr 58px;gap:9px;align-items:center;margin:5px 0}
+.abrow{display:grid;grid-template-columns:64px 1fr 86px;gap:9px;align-items:center;margin:5px 0}
 .abrow .bl{font-size:10.5px;color:#e2e8f0;text-align:right;font-family:'IBM Plex Mono',monospace}
 .abtrack{position:relative;height:22px;background:rgba(255,255,255,.045);border-radius:4px}
 .abtrack i{position:absolute;left:0;height:8px;border-radius:2px}
 .abtrack i.pre{top:2px;background:rgba(148,163,184,.55)}
-.abtrack i.post{top:12px}
+.abtrack i.post{top:12px;background:#34d399;opacity:.85}
 .abtrack .tk{position:absolute;top:-2px;bottom:-2px;width:2px;background:#e9c25f;
   box-shadow:0 0 5px rgba(233,194,95,.6);border-radius:1px}
 .abkey{display:flex;flex-wrap:wrap;gap:14px;font-size:10.5px;color:#94a3b8;margin:8px 0 10px}
 .abkey span{display:inline-flex;align-items:center;gap:5px}
 .abkey i{display:inline-block;width:14px;height:7px;border-radius:2px}
 .abkey b.tk{display:inline-block;width:2px;height:12px;background:#e9c25f}
+.abnums{display:flex;justify-content:flex-end;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px}
 @media print{.badge{border:1px solid #999;color:#000!important;background:#eee!important}
   .caveat{background:#f6f6f6;color:#000;border-color:#bbb}
   .renocard,.bigstat .bs{background:#fafafa;border-color:#ddd}
@@ -914,123 +915,163 @@ td.l.name{white-space:nowrap}
   <p class="lead">Every series is binned on the same 25-yard grid.
   <b>Grey bar</b> = Detroit pre-renovation (64,116 measured approach shots).
   <b>Colored bar</b> = the projected post-restoration mix, run forward from the per-hole
-  approach model. <b>Gold tick</b> = the Tour-wide share. The number on the right is the
-  projected change in percentage points.</p>
+  approach model. <b>Gold tick</b> = the Tour-wide share. On the right: the projected change
+  against pre-renovation, and where the projected share lands against the Tour. Both bars use
+  their legend colour — a bar sitting past the gold tick means Detroit asks for that distance
+  more often than the Tour does.</p>
   <div class="abkey">
     <span><i style="background:rgba(148,163,184,.55)"></i>pre-reno (measured)</span>
     <span><i style="background:#34d399"></i>projected post-reno</span>
     <span><b class="tk"></b>Tour average</span>
+  </div>
+  <div class="abrow" style="margin-bottom:2px">
+    <div class="bl"></div><div></div>
+    <div class="abnums" style="font-size:8.5px;letter-spacing:.04em;color:#64748b;
+      text-transform:uppercase"><span>vs pre</span><span>vs tour</span></div>
   </div>
   <div class="abrow">
           <div class="bl">0-25</div>
           <div class="abtrack">
             <i class="pre" style="width:0.00%"
                title="pre-reno 0.0%"></i>
-            <i class="post" style="width:0.90%;background:#34d399;
-               opacity:0.36" title="projected 0.2%"></i>
+            <i class="post" style="width:0.90%"
+               title="projected 0.2%"></i>
             <span class="tk" style="left:0.00%" title="Tour 0.0%"></span>
           </div>
-          <div class="bindelta" style="color:#34d399">+0.2</div>
+          <div class="abnums">
+            <span style="color:#34d399" title="projected change vs pre-renovation">+0.2</span>
+            <span style="color:#cbd5e1" title="projected share vs the Tour average">+0.2</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">25-50</div>
           <div class="abtrack">
             <i class="pre" style="width:0.00%"
                title="pre-reno 0.0%"></i>
-            <i class="post" style="width:4.76%;background:#34d399;
-               opacity:0.43" title="projected 0.9%"></i>
+            <i class="post" style="width:4.76%"
+               title="projected 0.9%"></i>
             <span class="tk" style="left:0.00%" title="Tour 0.0%"></span>
           </div>
-          <div class="bindelta" style="color:#34d399">+0.9</div>
+          <div class="abnums">
+            <span style="color:#34d399" title="projected change vs pre-renovation">+0.9</span>
+            <span style="color:#cbd5e1" title="projected share vs the Tour average">+0.9</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">50-75</div>
           <div class="abtrack">
             <i class="pre" style="width:24.42%"
                title="pre-reno 4.6%"></i>
-            <i class="post" style="width:18.97%;background:#f87171;
-               opacity:0.44" title="projected 3.6%"></i>
+            <i class="post" style="width:18.97%"
+               title="projected 3.6%"></i>
             <span class="tk" style="left:15.43%" title="Tour 2.9%"></span>
           </div>
-          <div class="bindelta" style="color:#f87171">-1.0</div>
+          <div class="abnums">
+            <span style="color:#f87171" title="projected change vs pre-renovation">-1.0</span>
+            <span style="color:#cbd5e1" title="projected share vs the Tour average">+0.7</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">75-100</div>
           <div class="abtrack">
             <i class="pre" style="width:53.38%"
                title="pre-reno 10.1%"></i>
-            <i class="post" style="width:50.42%;background:#f87171;
-               opacity:0.40" title="projected 9.5%"></i>
+            <i class="post" style="width:50.42%"
+               title="projected 9.5%"></i>
             <span class="tk" style="left:28.59%" title="Tour 5.4%"></span>
           </div>
-          <div class="bindelta" style="color:#f87171">-0.6</div>
+          <div class="abnums">
+            <span style="color:#f87171" title="projected change vs pre-renovation">-0.6</span>
+            <span style="color:#7dd3fc" title="projected share vs the Tour average">+4.1</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">100-125</div>
           <div class="abtrack">
             <i class="pre" style="width:67.18%"
                title="pre-reno 12.7%"></i>
-            <i class="post" style="width:61.05%;background:#f87171;
-               opacity:0.45" title="projected 11.6%"></i>
+            <i class="post" style="width:61.05%"
+               title="projected 11.6%"></i>
             <span class="tk" style="left:56.24%" title="Tour 10.6%"></span>
           </div>
-          <div class="bindelta" style="color:#f87171">-1.2</div>
+          <div class="abnums">
+            <span style="color:#f87171" title="projected change vs pre-renovation">-1.2</span>
+            <span style="color:#cbd5e1" title="projected share vs the Tour average">+0.9</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">125-150</div>
           <div class="abtrack">
             <i class="pre" style="width:83.77%"
                title="pre-reno 15.8%"></i>
-            <i class="post" style="width:72.89%;background:#f87171;
-               opacity:0.53" title="projected 13.8%"></i>
+            <i class="post" style="width:72.89%"
+               title="projected 13.8%"></i>
             <span class="tk" style="left:80.60%" title="Tour 15.2%"></span>
           </div>
-          <div class="bindelta" style="color:#f87171">-2.1</div>
+          <div class="abnums">
+            <span style="color:#f87171" title="projected change vs pre-renovation">-2.1</span>
+            <span style="color:#fca5a5" title="projected share vs the Tour average">-1.5</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">150-175</div>
           <div class="abtrack">
             <i class="pre" style="width:90.96%"
                title="pre-reno 17.2%"></i>
-            <i class="post" style="width:98.52%;background:#34d399;
-               opacity:0.47" title="projected 18.6%"></i>
+            <i class="post" style="width:98.52%"
+               title="projected 18.6%"></i>
             <span class="tk" style="left:100.00%" title="Tour 18.9%"></span>
           </div>
-          <div class="bindelta" style="color:#34d399">+1.4</div>
+          <div class="abnums">
+            <span style="color:#34d399" title="projected change vs pre-renovation">+1.4</span>
+            <span style="color:#cbd5e1" title="projected share vs the Tour average">-0.3</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">175-200</div>
           <div class="abtrack">
             <i class="pre" style="width:47.78%"
                title="pre-reno 9.0%"></i>
-            <i class="post" style="width:80.81%;background:#34d399;
-               opacity:0.89" title="projected 15.3%"></i>
+            <i class="post" style="width:80.81%"
+               title="projected 15.3%"></i>
             <span class="tk" style="left:97.67%" title="Tour 18.5%"></span>
           </div>
-          <div class="bindelta" style="color:#34d399">+6.2</div>
+          <div class="abnums">
+            <span style="color:#34d399" title="projected change vs pre-renovation">+6.2</span>
+            <span style="color:#fca5a5" title="projected share vs the Tour average">-3.2</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">200-225</div>
           <div class="abtrack">
             <i class="pre" style="width:46.67%"
                title="pre-reno 8.8%"></i>
-            <i class="post" style="width:62.21%;background:#34d399;
-               opacity:0.60" title="projected 11.8%"></i>
+            <i class="post" style="width:62.21%"
+               title="projected 11.8%"></i>
             <span class="tk" style="left:59.51%" title="Tour 11.3%"></span>
           </div>
-          <div class="bindelta" style="color:#34d399">+2.9</div>
+          <div class="abnums">
+            <span style="color:#34d399" title="projected change vs pre-renovation">+2.9</span>
+            <span style="color:#cbd5e1" title="projected share vs the Tour average">+0.5</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">225-250</div>
           <div class="abtrack">
             <i class="pre" style="width:31.87%"
                title="pre-reno 6.0%"></i>
-            <i class="post" style="width:31.18%;background:#f87171;
-               opacity:0.36" title="projected 5.9%"></i>
+            <i class="post" style="width:31.18%"
+               title="projected 5.9%"></i>
             <span class="tk" style="left:34.25%" title="Tour 6.5%"></span>
           </div>
-          <div class="bindelta" style="color:#f87171">-0.1</div>
+          <div class="abnums">
+            <span style="color:#f87171" title="projected change vs pre-renovation">-0.1</span>
+            <span style="color:#cbd5e1" title="projected share vs the Tour average">-0.6</span>
+          </div>
         </div><div class="abrow">
           <div class="bl">250+</div>
           <div class="abtrack">
             <i class="pre" style="width:82.61%"
                title="pre-reno 15.6%"></i>
-            <i class="post" style="width:46.88%;background:#f87171;
-               opacity:0.93" title="projected 8.9%"></i>
+            <i class="post" style="width:46.88%"
+               title="projected 8.9%"></i>
             <span class="tk" style="left:56.24%" title="Tour 10.6%"></span>
           </div>
-          <div class="bindelta" style="color:#f87171">-6.8</div>
+          <div class="abnums">
+            <span style="color:#f87171" title="projected change vs pre-renovation">-6.8</span>
+            <span style="color:#fca5a5" title="projected share vs the Tour average">-1.8</span>
+          </div>
         </div>
   <p style="margin-top:12px">The restoration pulls Detroit <b>toward</b> the Tour shape rather
   than further from it. Summed absolute deviation from the Tour mix falls from
