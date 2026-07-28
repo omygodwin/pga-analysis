@@ -540,11 +540,17 @@ tr[class*="tier-"] td:first-child{position:relative}
 .hero h1{margin:2px 0 3px}
 .hero .sub{color:var(--ink-soft);font-size:13.5px}
 .hero .sub2{color:var(--ink-dim);font-size:12.5px;margin-top:2px}
-.name .hs{width:58px;height:58px;border-radius:50%;object-fit:cover;
+/* BASE rule, deliberately not scoped to a container. A context-scoped
+   selector (.name .hs) silently missed headshots emitted inside .rs-n
+   cells, which then fell back to the CDN's intrinsic 160px. Any .hs
+   anywhere gets a size; specific contexts override below. */
+.hs{width:58px;height:58px;border-radius:50%;object-fit:cover;
   object-position:50% 18%;vertical-align:middle;margin-right:11px;
   background:var(--navy-800);display:inline-block;flex:0 0 auto}
 /* the CDN transform is h_160/w_160, so 58px still renders at >2x DPR */
 td.l.name{min-width:210px}
+/* compact half-width mini-tables (the putter lists) need a smaller chip */
+.rs-mini .hs{width:34px;height:34px;margin-right:8px}
 td.l.name{white-space:nowrap}
 
 /* --- conditions / course-type / pin zones ------------------------- */
